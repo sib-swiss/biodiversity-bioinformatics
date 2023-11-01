@@ -1,0 +1,61 @@
+site_name: Biodiversity bioinformatics
+nav:
+    - Home: index.md
+    # - Precourse preparations: precourse.md
+    # - Course schedule: course_schedule.md
+    # - Day 1 - Introduction to molecular evolution & phylogenetics:
+    #   # - Introduction to containers: course_material/day1/introduction_containers.md
+    # - Day 2 - Orthology-focused arthropod comparative genomics:
+    #   # - General guidelines: course_material/day2/1_guidelines.md
+    # - Day 3 - Duplication of genes and genomes, expression:
+    #   # - General guidelines: course_material/day2/1_guidelines.md
+
+theme:
+  name: material
+  logo: assets/images/SIB_logo.svg
+  favicon: assets/images/SIB_logo.svg
+  custom_dir: overrides
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - announce.dismiss
+
+extra:
+  version:
+    provider: mike
+
+copyright: >
+  Copyright &copy; 2023 SIB Swiss institute of Bioinformatics -
+  <a href="#__consent">Change cookie settings</a>
+
+# Repository
+repo_name: sib-swiss/biodiversity-bioinformatics
+repo_url: https://github.com/sib-swiss/biodiversity-bioinformatics
+edit_uri: edit/main/docs/  # AT. Double-check this
+
+markdown_extensions:
+  - abbr
+  - def_list
+  - footnotes
+  - tables
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - sane_lists
+  - smarty
+  - toc
+  - pymdownx.superfences
+  - md_in_html
+  - attr_list
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+
+extra_css:
+  - stylesheets/extra.css
