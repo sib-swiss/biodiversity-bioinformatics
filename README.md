@@ -8,8 +8,8 @@ Any contribution to this course material is highly appreciated :+1:.
 
 ## Authors
 
-- Antonin Thiébaut [:custom-orcid:](https://orcid.org/0000-0002-7587-5587)  <!-- AT. Check ORCID logo -->
-- Patricia Palagi [:custom-orcid:](https://orcid.org/0000-0001-9062-6303)  <!-- AT. Check ORCID logo -->
+- Antonin Thiébaut [ORCiD](https://orcid.org/0000-0002-7587-5587)  <!-- AT. Check ORCID logo -->
+- Patricia Palagi [ORCiD](https://orcid.org/0000-0001-9062-6303)  <!-- AT. Check ORCID logo -->
 
 ## How to reuse this material
 
