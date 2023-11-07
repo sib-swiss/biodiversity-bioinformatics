@@ -24,9 +24,9 @@ extra:
   version:
     provider: mike
 
-copyright: >
-  Copyright &copy; 2023 SIB Swiss institute of Bioinformatics -
-  <a href="#__consent">Change cookie settings</a>
+copyright:
+  # Copyright &copy; 2023 SIB Swiss institute of Bioinformatics -  # AT. Delete when finished?
+  <a href="#__consent">Change cookies settings</a>
 
 # Repository
 repo_name: sib-swiss/biodiversity-bioinformatics

@@ -1,6 +1,6 @@
 # Course website
 
-## Teachers
+## Course teachers and authors
 
 ### Day 1
 
@@ -21,17 +21,10 @@
 - Marina Braso Vives [:custom-orcid:](https://orcid.org/0000-0001-5007-5789)
 - Alessandro Brandulas Cammarata [:custom-orcid:](https://orcid.org/0009-0006-5956-9842)
 
-## Authors
+## Course repository and website authors
 
-- Antonin Thiébaut [:custom-orcid:](https://orcid.org/0000-0002-7587-5587)
-- Patricia Palagi [:custom-orcid:](https://orcid.org/0000-0001-9062-6303)
-
-
-## License & copyright
-
-**License:** [CC BY-SA 4.0](https://raw.githubusercontent.com/sib-swiss/containers-introduction-training/main/LICENSE.md)  <!-- AT. Update licence link -->
-
-**Copyright:** [SIB Swiss Institute of Bioinformatics](https://www.sib.swiss/)
+* Antonin Thiébaut [:custom-orcid:](https://orcid.org/0000-0002-7587-5587)
+* Patricia Palagi [:custom-orcid:](https://orcid.org/0000-0001-9062-6303)
 
 ## Material
 
