@@ -1,4 +1,3 @@
-
 ## Technical requirements
 
 Your computer should have an internet connection, and at least 8 GB RAM and 50 GB free disk space.

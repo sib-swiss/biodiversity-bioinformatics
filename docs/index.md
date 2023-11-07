@@ -54,8 +54,6 @@ To reach the learning outcomes we will use lectures and exercises. During exerci
 
 Each block has practical work involved. Some more than others. The practicals are subdivided into chapters, and we'll have a (short) discussion after each chapter. All answers to the practicals are incorporated, but they are hidden. Do the exercise first by yourself, before checking out the answer. If your answer is different from the answer in the practicals, try to figure out why they are different.
 
-<!-- AT. May need to adapt this -->
-
 ### Asking questions
 
 During lectures, you are encouraged to raise your hand if you have questions.
