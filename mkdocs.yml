@@ -7,6 +7,7 @@ nav:
     - Day 2 - Orthology-focused arthropod comparative genomics:
       - General information and course material: course_material/day2/1_general.md
       - Software and resources: course_material/day2/2_software.md
+      - BUSCO - the what, why, and how!: course_material/day2/3_busco.md
     # - Day 3 - Duplication of genes and genomes, expression:
     #   # - General guidelines: course_material/day2/1_guidelines.md
 
