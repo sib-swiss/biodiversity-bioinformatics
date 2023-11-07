@@ -4,22 +4,22 @@
 
 ### Day 1
 
-- Natasha Glover [:custom-orcid:](https://orcid.org/0000-0003-1811-4340)
-- Christophe Dessimoz [:custom-orcid:](https://orcid.org/0000-0002-2170-853X)
-- Sina Majidian [:custom-orcid:](https://orcid.org/0000-0001-5345-6982)
-- Yannis Nevers
+* Natasha Glover [:custom-orcid:](https://orcid.org/0000-0003-1811-4340)
+* Christophe Dessimoz [:custom-orcid:](https://orcid.org/0000-0002-2170-853X)
+* Sina Majidian [:custom-orcid:](https://orcid.org/0000-0001-5345-6982)
+* Yannis Nevers
 
 ### Day 2
 
-- Robert Waterhouse [:custom-orcid:](https://orcid.org/0000-0003-4199-9052)
-- Antonin Thiébaut [:custom-orcid:](https://orcid.org/0000-0002-7587-5587)
-- Giulia Campli
+* Robert Waterhouse [:custom-orcid:](https://orcid.org/0000-0003-4199-9052)
+* Antonin Thiébaut [:custom-orcid:](https://orcid.org/0000-0002-7587-5587)
+* Giulia Campli
 
 ### Day 3
 
-- Marc Robinson-Rechavi [:custom-orcid:](https://orcid.org/0000-0002-3437-3329)
-- Marina Braso Vives [:custom-orcid:](https://orcid.org/0000-0001-5007-5789)
-- Alessandro Brandulas Cammarata [:custom-orcid:](https://orcid.org/0009-0006-5956-9842)
+* Marc Robinson-Rechavi [:custom-orcid:](https://orcid.org/0000-0002-3437-3329)
+* Marina Braso Vives [:custom-orcid:](https://orcid.org/0000-0001-5007-5789)
+* Alessandro Brandulas Cammarata [:custom-orcid:](https://orcid.org/0009-0006-5956-9842)
 
 ## Course repository and website authors
 
