@@ -4,9 +4,8 @@ nav:
     - Precourse preparations and Gitpod information: precourse.md
     - Course schedule: course_schedule.md
     # - Day 1 - Introduction to molecular evolution & phylogenetics:
-    #   # - Introduction to containers: course_material/day1/introduction_containers.md
-    # - Day 2 - Orthology-focused arthropod comparative genomics:
-    #   # - General guidelines: course_material/day2/1_guidelines.md
+    - Day 2 - Orthology-focused arthropod comparative genomics:
+      - Software and resources: course_material/day2/1_software.md
     # - Day 3 - Duplication of genes and genomes, expression:
     #   # - General guidelines: course_material/day2/1_guidelines.md
 
