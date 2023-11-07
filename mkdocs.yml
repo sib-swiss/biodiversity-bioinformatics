@@ -1,7 +1,7 @@
 site_name: Biodiversity bioinformatics
 nav:
     - Home: index.md
-    # - Precourse preparations: precourse.md
+    - Precourse preparations and Gitpod information: precourse.md
     # - Course schedule: course_schedule.md
     # - Day 1 - Introduction to molecular evolution & phylogenetics:
     #   # - Introduction to containers: course_material/day1/introduction_containers.md
@@ -12,8 +12,8 @@ nav:
 
 theme:
   name: material
-  logo: assets/images/SIB_logo.svg
-  favicon: assets/images/SIB_logo.svg
+  logo: assets/images/general/SIB_logo.svg
+  favicon: assets/images/general/SIB_logo.svg
   custom_dir: overrides
   icon:
     repo: fontawesome/brands/github
