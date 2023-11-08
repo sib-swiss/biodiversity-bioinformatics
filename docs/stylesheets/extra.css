@@ -1,4 +1,24 @@
+/* Custom styles to override MkDocs defaults and enhance theme */
+
 :root {
   --md-primary-fg-color:        #D40000;
   --md-accent-fg-color:         #999999;
+}
+
+/* Unordered list <ul> symbols:
+ * - level 1 is filled disc
+ * - level 2 is hollow circle
+ * - level 3 is filled square
+ */
+
+article ul {
+        list-style-type:  disc !important;
+}
+
+article ul ul {
+        list-style-type:  circle !important;
+}
+
+article ul ul ul {
+        list-style-type:  square !important;
 }
