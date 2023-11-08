@@ -16,7 +16,13 @@ Understand the principles of graph-based orthology delineation using OrthoDB as 
 
 [:fontawesome-solid-file-pdf: Download the presentation](../../assets/pdf/day2_case_study2_Antonin_THIEBAUT.pdf){: .md-button }
 
-## Notes
+## Course gitlab repository
 
-* Remember to open a Gitpod workspace before starting the practicals. Click [here](../../precourse.md#software) for more information on Gitpod workspace
-* If you need intermediate result file, follow [this procedure](2_software.md#folder-with-intermediate-result-files) on how to get them
+The gitlab repository to run all the practicals is available at [https://gitlab.com/evogenlab/teaching-repos/biodivinfo](https://gitlab.com/evogenlab/teaching-repos/biodivinfo).
+
+!!! note
+	Remember to open a Gitpod workspace before starting the practicals. Click [here](../../precourse.md#software) for more information on Gitpod workspace.
+
+## Intermediate result files
+
+If you need intermediate result files, follow [this procedure](2_software.md#folder-with-intermediate-result-files) on how to get them.
