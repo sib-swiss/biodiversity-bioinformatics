@@ -366,7 +366,7 @@ By default, your tree should be displayed similarly to this one:
   <img src="../../../assets/images/day2/session2/itol_tree1.jpg" align="center" width=600/>
 </figure>
 
-Use the `Control panel` on the right of the tree to select the `Advanced` tab and choose to display `Bootstraps` as `Text`.
+Use the `Control Panel` on the right of the tree to select the `Advanced` tab and choose to display `Bootstraps` as `Text`.
 
 <figure>
   <img src="../../../assets/images/day2/session2/itol_tree2.jpg" align="center" width=600/>
