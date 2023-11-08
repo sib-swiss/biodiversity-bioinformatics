@@ -265,7 +265,7 @@ This is despite the fact that OrthoDB v10 contains 31 species of Saccharomycetac
 This has been recognised in the [literature](https://academic.oup.com/view-large/106510797), and indeed two of the other missing BUSCOs are the group of Subunit H orthologues, [976469at2759](https://v10.orthodb.org/?query=976469at2759), and the group of Subunit M orthologues, [679771at2759](https://v10.orthodb.org/?query=679771at2759).
 
 <figure>
-  <img src="../../../assets/images/day2/session1/orthodb_missing4_literature.jpg" align="center" width=500/>
+  <img src="../../../assets/images/day2/session1/orthodb_missing4_literature.jpg" align="center" width=600/>
 </figure>
 
 ## Assessing genome annotations for completeness
