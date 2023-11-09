@@ -1,6 +1,6 @@
-Website is hosted at: [https://sib-swiss.github.io/biodiversity-bioinformatics/](https://sib-swiss.github.io/biodiversity-bioinformatics/)  <!-- AT. Double check link -->
+Website is hosted at: [https://sib-swiss.github.io/biodiversity-bioinformatics/](https://sib-swiss.github.io/biodiversity-bioinformatics/)
 
-Please refer to [issues](https://github.com/sib-swiss/biodiversity-bioinformatics/issues) for improvements/bugs for course material or the website.  <!-- AT. Double check link -->
+Please refer to [issues](https://github.com/sib-swiss/biodiversity-bioinformatics/issues) for improvements/bugs for course material or the website.
 
 Any contribution to this course material is highly appreciated :+1:.
 
@@ -8,8 +8,8 @@ Any contribution to this course material is highly appreciated :+1:.
 
 ## Authors
 
-- Antonin Thiébaut [ORCiD](https://orcid.org/0000-0002-7587-5587)  <!-- AT. Check ORCID logo -->
-- Patricia Palagi [ORCiD](https://orcid.org/0000-0001-9062-6303)  <!-- AT. Check ORCID logo -->
+- Antonin Thiébaut [ORCiD](https://orcid.org/0000-0002-7587-5587)
+- Patricia Palagi [ORCiD](https://orcid.org/0000-0001-9062-6303)
 
 ## How to reuse this material
 

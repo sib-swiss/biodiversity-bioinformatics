@@ -29,13 +29,12 @@ extra:
     provider: mike
 
 copyright:
-  # Copyright &copy; 2023 SIB Swiss institute of Bioinformatics -  # AT. Delete when finished?
   <a href="#__consent">Change cookies settings</a>
 
 # Repository
 repo_name: sib-swiss/biodiversity-bioinformatics
 repo_url: https://github.com/sib-swiss/biodiversity-bioinformatics
-edit_uri: edit/main/docs/  # AT. Double-check this
+edit_uri: edit/main/docs/
 
 markdown_extensions:
   - abbr
