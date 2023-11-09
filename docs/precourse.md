@@ -14,19 +14,19 @@ Most of the exercises will be run on [Gitpod](https://www.gitpod.io/). Here are 
 Remember your email, your username, and your password!
 
 <figure>
-  <img src="../../assets/images/general/gitpod1.jpg" align="center" width="300"/>
+  <img src="../assets/images/general/gitpod1.jpg" align="center" width="300"/>
 </figure>
 
 2. Open [Gitpod](https://www.gitpod.io/) and link your GitLab Account
 
 <figure>
-  <img src="../../assets/images/general/gitpod2.jpg" align="center" width="300"/>
+  <img src="../assets/images/general/gitpod2.jpg" align="center" width="300"/>
 </figure>
 
 Authenticate your login with your gitlab/github credentials!
 
 <figure>
-  <img src="../../assets/images/general/gitpod3.jpg" align="center" width="300"/>
+  <img src="../assets/images/general/gitpod3.jpg" align="center" width="300"/>
 </figure>
 
 3. Open the desired repository in Gitpod: add `gitpod.io/#` at the beginning of the repository URL or...
