@@ -12,7 +12,7 @@
 ### Day 2
 
 * Robert Waterhouse [:custom-orcid:](https://orcid.org/0000-0003-4199-9052)
-* Giulia Campli
+* Giulia Campli [:custom-orcid:](https://orcid.org/0009-0008-7732-9222)
 * Antonin Thiébaut [:custom-orcid:](https://orcid.org/0000-0002-7587-5587)
 
 ### Day 3
