@@ -9,7 +9,7 @@ Build a molecular species phylogeny using orthologues identified from an ortholo
 
 ## Collecting input data from an orthology database
 
-![](../../../assets/images/day2/session2/swiss_orthology.jpg){ style="float: right;" }
+![](../../assets/images/day2/session2/swiss_orthology_logo.jpg){ style="float: right;" width=250}  <!-- AT. Double-check path -->
 
 There are many publicly accessible orthology databases, or tools that can be used to delineate orthology with your own datasets. Today, we will use data from [OrthoDB](https://www.orthodb.org/). OrthoDB is part of the [SwissOrthology](https://swissorthology.ch/service/search) resource.
 
@@ -260,25 +260,25 @@ TrimAl’s [HTML output](https://glcdn.githack.com/evogenlab/teaching-repos/biod
 
 We will now use the filtered alignment as input to [RAxML](https://cme.h-its.org/exelixis/web/software/raxml/) to build a Maximum Likelihood phylogeny. Because we have single-copy orthologues - one from each of our 15 beetle species - we can have some expectation that this gene tree would represent the species tree.
 
-For reference: species names from their taxonomic identifiers (from OrthoDB):
+For reference: species names from their taxonomic identifiers (from OrthoDB):  <!-- AT. Double-check image paths in table -->
 
 | OrthoDB taxonomic identifiers   | Species name                  | Beautiful beetles                                                       |
 |-------------------------------  |-----------------------------  |------------------------------------------------------------------------ |
-| 110193_0                        | _Nicrophorus vespilloides_    | ![](../../../assets/images/day2/session2/beetle_110193.jpg){width=75}   |
-| 115357_0                        | _Harmonia axyridis_           | ![](../../../assets/images/day2/session2/beetle_115357.jpg){width=75}   |
-| 116153_0                        | _Aethina tumida_              | ![](../../../assets/images/day2/session2/beetle_116153.jpg){width=75}   |
-| 1629725_0                       | _Oryctes borbonicus_          | ![](../../../assets/images/day2/session2/beetle_1629725.jpg){width=75}  |
-| 166361_0                        | _Onthophagus taurus_          | ![](../../../assets/images/day2/session2/beetle_166361.jpg){width=75}   |
-| 217634_0                        | _Anoplophora glabripennis_    | ![](../../../assets/images/day2/session2/beetle_217634.jpg){width=75}   |
-| 224129_0                        | _Agrilus planipennis_         | ![](../../../assets/images/day2/session2/beetle_224129.jpg){width=75}   |
-| 41139_0                         | _Coccinella septempunctata_   | ![](../../../assets/images/day2/session2/beetle_41139.jpg){width=75}    |
-| 41895_0                         | _Tribolium madens_            | ![](../../../assets/images/day2/session2/beetle_41895.jpg){width=75}    |
-| 50390_0                         | _Diabrotica virgifera_        | ![](../../../assets/images/day2/session2/beetle_50390.jpg){width=75}    |
-| 7048_0                          | _Sitophilus oryzae_           | ![](../../../assets/images/day2/session2/beetle_7048.jpg){width=75}     |
-| 7054_0                          | _Photinus pyralis_            | ![](../../../assets/images/day2/session2/beetle_7054.jpg){width=75}     |
-| 7070_0                          | _Tribolium castaneum_         | ![](../../../assets/images/day2/session2/beetle_7070.jpg){width=75}     |
-| 7539_0                          | _Leptinotarsa decemlineata_   | ![](../../../assets/images/day2/session2/beetle_7539.jpg){width=75}     |
-| 77166_0                         | _Dendroctonus ponderosae_     | ![](../../../assets/images/day2/session2/beetle_77166.jpg){width=75}    |
+| 110193_0                        | _Nicrophorus vespilloides_    | ![](../../assets/images/day2/session2/beetle_110193.jpg){width=75}   |
+| 115357_0                        | _Harmonia axyridis_           | ![](../../assets/images/day2/session2/beetle_115357.jpg){width=75}   |
+| 116153_0                        | _Aethina tumida_              | ![](../../assets/images/day2/session2/beetle_116153.jpg){width=75}   |
+| 1629725_0                       | _Oryctes borbonicus_          | ![](../../assets/images/day2/session2/beetle_1629725.jpg){width=75}  |
+| 166361_0                        | _Onthophagus taurus_          | ![](../../assets/images/day2/session2/beetle_166361.jpg){width=75}   |
+| 217634_0                        | _Anoplophora glabripennis_    | ![](../../assets/images/day2/session2/beetle_217634.jpg){width=75}   |
+| 224129_0                        | _Agrilus planipennis_         | ![](../../assets/images/day2/session2/beetle_224129.jpg){width=75}   |
+| 41139_0                         | _Coccinella septempunctata_   | ![](../../assets/images/day2/session2/beetle_41139.jpg){width=75}    |
+| 41895_0                         | _Tribolium madens_            | ![](../../assets/images/day2/session2/beetle_41895.jpg){width=75}    |
+| 50390_0                         | _Diabrotica virgifera_        | ![](../../assets/images/day2/session2/beetle_50390.jpg){width=75}    |
+| 7048_0                          | _Sitophilus oryzae_           | ![](../../assets/images/day2/session2/beetle_7048.jpg){width=75}     |
+| 7054_0                          | _Photinus pyralis_            | ![](../../assets/images/day2/session2/beetle_7054.jpg){width=75}     |
+| 7070_0                          | _Tribolium castaneum_         | ![](../../assets/images/day2/session2/beetle_7070.jpg){width=75}     |
+| 7539_0                          | _Leptinotarsa decemlineata_   | ![](../../assets/images/day2/session2/beetle_7539.jpg){width=75}     |
+| 77166_0                         | _Dendroctonus ponderosae_     | ![](../../assets/images/day2/session2/beetle_77166.jpg){width=75}    |
 
 RAxML has many options! View the summary of parameters/options using the `-h` flag, for the full explanations you’ll need to check out the RAxML manual later:
 ```
