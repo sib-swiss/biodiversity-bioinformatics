@@ -9,7 +9,7 @@ Estimate ancestral gene copy numbers given the species phylogeny and counts of o
 
 ## Using orthologue counts to estimate ancestral gene content
 
-![](../../assets/images/day2/session4/cafe_logo.jpg){ style="float: right;" width=250}  <!-- AT. Double-check path -->
+![](../../assets/images/day2/session4/cafe_logo.jpg){ style="float: right;" width=250}
 
 There are a huge range of tools designed for ancestral state reconstructions, you may for example have encountered the R package, [phytools](http://www.phytools.org/). Today we will use [CAFE5](https://github.com/hahnlab/CAFE5), a tool specifically designed for working with gene count data to infer ancestral gene contents per gene family.
 
@@ -144,8 +144,8 @@ The `.png` output files should be in your working directory, you can open them i
 * **Which internal node shows the most losses?**
 
 ??? done "Answer"
-    * The node between species `224129` and `7054` shows the most gains (230).
-    * The node between species `115357` and `7070` shows the most losses (116).
+    * The node between species `224129` and `7054` shows the most gains (**230**).
+    * The node between species `115357` and `7070` shows the most losses (**116**).
 
 A reminder of the species in our tree:
 
@@ -178,7 +178,7 @@ Copy the output of the previous `grep` command (which is a Newick tree) and open
 !!! note "If you did not manage to visualise the tree"
     You can find it on Gitpod at `/workspace/biodivinfo/data/Session4/tree_10261at7041_CAFE.jpg`. Or you can directly see it [here](https://gitlab.com/evogenlab/teaching-repos/biodivinfo/-/blob/main/data/Session4/tree_10261at7041_CAFE.jpg).
 
-![](../../assets/images/day2/session4/itol_labels.jpg){ style="float: right;" width=300}  <!-- AT. Double-check path -->
+![](../../assets/images/day2/session4/itol_labels.jpg){ style="float: right;" width=300}
 
 Terminal nodes (leaves) are labelled with the species (green), CAFE's own numbering of all nodes in the tree (yellow) and finally gene the copy number (pink). Nodes inside the tree are labelled with the internal CAFE numbering of all nodes in the tree (yellow) and the gene the copy number (pink).
 

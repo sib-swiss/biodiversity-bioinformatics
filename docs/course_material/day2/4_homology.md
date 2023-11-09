@@ -9,7 +9,7 @@ Build a molecular species phylogeny using orthologues identified from an ortholo
 
 ## Collecting input data from an orthology database
 
-![](../../assets/images/day2/session2/swiss_orthology_logo.jpg){ style="float: right;" width=250}  <!-- AT. Double-check path -->
+![](../../assets/images/day2/session2/swiss_orthology_logo.jpg){ style="float: right;" width=250}
 
 There are many publicly accessible orthology databases, or tools that can be used to delineate orthology with your own datasets. Today, we will use data from [OrthoDB](https://www.orthodb.org/). OrthoDB is part of the [SwissOrthology](https://swissorthology.ch/service/search) resource.
 
@@ -97,7 +97,7 @@ Expand the **Orthologs by organism** table to view members of this orthologous g
 * **Why might some be rather different from the average? What impacts could this have when it comes to using these sequences for building a phylogeny?**
 
 ??? done "Answer"
-    The average length of these proteins is ~930 AAs. There are no substantially longer proteins, but we can notice much shorter proteins (349 AAs, 613 AAs...) that are displayed with one or two exclamation marks `!` depending on the length difference. These short proteins might be real but more likely, they indicate an annotation problem (for example a case of automatic annotation that did not pick-up the full length protein). These proteins can severely impact species tree creation because they will cause a bias in the multiple alignment step.
+    The average length of these proteins is **~930 AAs**. There are no substantially longer proteins, but we can notice much shorter proteins (349 AAs, 613 AAs...) that are displayed with one or two exclamation marks `!` depending on the length difference. These short proteins might be real but more likely, they indicate an annotation problem (for example a case of automatic annotation that did not pick-up the full length protein). These proteins can severely impact species tree creation because they will cause a bias in the multiple alignment step.
 
 Additional information about each gene can be viewed by clicking on the chevron buttons `>` or `>>`, _e.g._ for the _Tribolium castaneum_ orthologue:
 
@@ -260,7 +260,7 @@ TrimAl's [HTML output](https://glcdn.githack.com/evogenlab/teaching-repos/biodiv
 
 We will now use the filtered alignment as input to [RAxML](https://cme.h-its.org/exelixis/web/software/raxml/) to build a Maximum Likelihood phylogeny. Because we have single-copy orthologues - one from each of our 15 beetle species - we can have some expectation that this gene tree would represent the species tree.
 
-For reference: species names from their taxonomic identifiers (from OrthoDB):  <!-- AT. Double-check image paths in table -->
+For reference, species names and their OrthoDB taxonomic identifiers:
 
 | OrthoDB taxonomic identifiers   | Species name                  | Beautiful beetles                                                       |
 |-------------------------------  |-----------------------------  |------------------------------------------------------------------------ |
@@ -340,7 +340,7 @@ RAxML output:
 * `_bootstrap`: tree from each bootstrap sample
 * `_info`: information on the analysis performed
 
-![](../../assets/images/day2/session2/raxml_results1.jpg){ style="float: top;" }  <!-- AT. Double-check path -->
+![](../../assets/images/day2/session2/raxml_results1.jpg){ style="float: top;" }
 
 Now we will visualise the results: the phylogenetic tree. Open the "bipartitions" file (`RAxML_bipartitions.10000at7041`) and copy the contents (the newick-format tree).
 

@@ -9,7 +9,7 @@ Convert the molecular species phylogeny into an ultrametric time-calibrated spec
 
 ## Building an ultrametric time-calibrated species tree
 
-![](../../assets/images/day2/session3/ape_logo.jpg){ style="float: right;" width=250}  <!-- AT. Double-check path -->
+![](../../assets/images/day2/session3/ape_logo.jpg){ style="float: right;" width=250}
 
 There are several tools available for converting molecular phylogenies to ultrametric time-calibrated trees. They usually require as input your molecular phylogeny as well as calibration points (estimates usually from fossils about the ranges of likely divergence times) for one or more nodes on the tree. We will use the **chronos** function of the [ape](http://ape-package.ird.fr/) package in R.
 
@@ -28,7 +28,7 @@ Using the same set of 15 beetle species, but now applying the concatenation appr
 * Concatenated the trimmed alignments into a superalignment
 * Used RAxML to compute, with bootstraps, the molecular species phylogeny
 
-This took several hours to run, therefore we are not going to try this in the class. Instead, the results are provided for you [here](https://gitlab.com/evogenlab/teaching-repos/biodivinfo/-/blob/main/data/Session3/OGs-1000-moltree-names-rooted.tre) and also pasted below, where the tree has been rooted based on the known outgroup species (`7054_0` & `224129_0`) and where internal labels and species names have been added to make it easier to interpret and compare with the current understanding of beetle phylogeny.
+This took several hours to run, therefore we are not going to try this in the class. Instead, the results are provided for you [here](https://gitlab.com/evogenlab/teaching-repos/biodivinfo/-/blob/main/data/Session3/Step1/OGs-1000-moltree-names-rooted.tre) and also pasted below, where the tree has been rooted based on the known outgroup species (`7054_0` & `224129_0`) and where internal labels and species names have been added to make it easier to interpret and compare with the current understanding of beetle phylogeny.
 
 Here is the molecular species tree in Newick format:
 ```
@@ -171,7 +171,7 @@ The default view looks something like this, so we can use the `Advanced Control 
   <img src="../../../assets/images/day2/session3/itol_tree3.jpg" align="center" width=600/>
 </figure>
 
-![](../../assets/images/day2/session3/itol_settings2.jpg){ style="float: right;", width=300 }  <!-- AT. Double-check path -->
+![](../../assets/images/day2/session3/itol_settings2.jpg){ style="float: right;", width=300 }
 
 Use the `Advanced Control Panel` to display the tree scale in inverted direction:
 
@@ -349,7 +349,7 @@ In the re-rooted tree the outgroup species (blue) are now clearly placed to defi
 
 ## Reconciling the gene and species trees
 
-![](../../assets/images/day2/session3/treerecs_logo.jpg){ style="float: right;" width=250}  <!-- AT. Double-check path -->
+![](../../assets/images/day2/session3/treerecs_logo.jpg){ style="float: right;" width=250}
 
 Now we will try to see if an algorithm specifically designed to identify where all speciation nodes, duplication nodes, and loss events have occurred on a gene tree given a species tree agrees or disagrees with your manual assessments.
 
@@ -437,9 +437,9 @@ The `.svg` image shows these results visually, by mapping the inferred evolution
 
 !!! note "`treerecs` symbols"
     * Duplication:
-    ![](../../assets/images/day2/session3/treerecs_dup.jpg){ style="float: middle;"}  <!-- AT. Double-check path -->
+    ![](../../assets/images/day2/session3/treerecs_dup.jpg){ style="float: middle;"}
     * Loss:
-    ![](../../assets/images/day2/session3/treerecs_loss.jpg){ style="float: middle;"}  <!-- AT. Double-check path -->
+    ![](../../assets/images/day2/session3/treerecs_loss.jpg){ style="float: middle;"}
 
 Let's now compare this with the input gene tree (`RAxML_bipartitions.10261at7041` - this should still be open in your iTOL browser), we can use iTOL to:
 

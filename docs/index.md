@@ -58,7 +58,7 @@ Each block has practical work involved. Some more than others. The practicals ar
 
 During lectures, you are encouraged to raise your hand if you have questions.
 
-A main source of communication will be our [Slack channel](https://www.slack.com). Ask background questions that interest you personally at **#background**. During the exercises, e.g. if you are stuck or don't understand what is going on, use the Slack channel **#q-and-a**.  This channel is not only meant for asking questions but also for answering questions of other participants. If you are replying to a question, use the "reply in thread" option.
+A main source of communication will be our [Slack channel](https://www.slack.com). Ask background questions that interest you personally at **#background**. During the exercises, _e.g_. if you are stuck or don't understand what is going on, use the Slack channel **#q-and-a**.  This channel is not only meant for asking questions but also for answering questions of other participants. If you are replying to a question, use the "reply in thread" option.
 
 The teachers will review the answers, and add/modify if necessary. If you're really stuck and need specific tutor support, write the teachers or helpers personally.
 
