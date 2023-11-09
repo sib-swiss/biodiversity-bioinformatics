@@ -1,0 +1,1101 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../3_busco/">
+      
+      
+        <link rel="next" href="../5_reconciliation/">
+      
+      
+      <link rel="icon" href="../../../assets/images/general/SIB_logo.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
+    
+    
+      
+        <title>Homology, Orthology, & Paralogy - Biodiversity bioinformatics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aim" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../.."> 
+    <strong>Click here to go to latest.</strong>
+  </a>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Biodiversity bioinformatics" class="md-header__button md-logo" aria-label="Biodiversity bioinformatics" data-md-component="logo">
+      
+  <img src="../../../assets/images/general/SIB_logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Biodiversity bioinformatics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Homology, Orthology, & Paralogy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sib-swiss/biodiversity-bioinformatics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sib-swiss/biodiversity-bioinformatics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Biodiversity bioinformatics" class="md-nav__button md-logo" aria-label="Biodiversity bioinformatics" data-md-component="logo">
+      
+  <img src="../../../assets/images/general/SIB_logo.svg" alt="logo">
+
+    </a>
+    Biodiversity bioinformatics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sib-swiss/biodiversity-bioinformatics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sib-swiss/biodiversity-bioinformatics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../precourse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Precourse preparations and Gitpod information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course_schedule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course schedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Day 2 - Orthology-focused arthropod comparative genomics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Day 2 - Orthology-focused arthropod comparative genomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_general/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General information and course material
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software and resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_busco/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BUSCO - the what, why, and how!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Homology, Orthology, & Paralogy
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Homology, Orthology, & Paralogy
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aim" class="md-nav__link">
+    Aim
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-outcomes" class="md-nav__link">
+    Learning outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collecting-input-data-from-an-orthology-database" class="md-nav__link">
+    Collecting input data from an orthology database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-tree-from-single-copy-orthologues" class="md-nav__link">
+    Building a tree from single-copy orthologues
+  </a>
+  
+    <nav class="md-nav" aria-label="Building a tree from single-copy orthologues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-sequence-alignment-using-mafft" class="md-nav__link">
+    Multiple sequence alignment using MAFFT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtertrim-using-trimal" class="md-nav__link">
+    Filter/trim using TrimAl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phylogeny-building-using-raxml" class="md-nav__link">
+    Phylogeny building using RAxML
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_reconciliation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gene-Tree-Species-Tree Reconciliation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6_reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gene Family Ancestral State Reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aim" class="md-nav__link">
+    Aim
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-outcomes" class="md-nav__link">
+    Learning outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collecting-input-data-from-an-orthology-database" class="md-nav__link">
+    Collecting input data from an orthology database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-tree-from-single-copy-orthologues" class="md-nav__link">
+    Building a tree from single-copy orthologues
+  </a>
+  
+    <nav class="md-nav" aria-label="Building a tree from single-copy orthologues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-sequence-alignment-using-mafft" class="md-nav__link">
+    Multiple sequence alignment using MAFFT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtertrim-using-trimal" class="md-nav__link">
+    Filter/trim using TrimAl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phylogeny-building-using-raxml" class="md-nav__link">
+    Phylogeny building using RAxML
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Homology, Orthology, & Paralogy</h1>
+
+<h2 id="aim">Aim</h2>
+<p>Build a molecular species phylogeny using orthologues identified from an orthology database.</p>
+<h2 id="learning-outcomes">Learning outcomes</h2>
+<ul>
+<li>What is needed as input to build a molecular species phylogeny?</li>
+<li>How do we have confidence in such a species tree?</li>
+</ul>
+<h2 id="collecting-input-data-from-an-orthology-database">Collecting input data from an orthology database</h2>
+<p><img alt="" src="../../../assets/images/day2/session2/swiss_orthology_logo.jpg" style="float: right;" width="250" />  <!-- AT. Double-check path --></p>
+<p>There are many publicly accessible orthology databases, or tools that can be used to delineate orthology with your own datasets. Today, we will use data from <a href="https://www.orthodb.org/">OrthoDB</a>. OrthoDB is part of the <a href="https://swissorthology.ch/service/search">SwissOrthology</a> resource.</p>
+<p>From your browser, search for orthodb.org or go to <a href="https://www.orthodb.org/">https://www.orthodb.org/</a>. We will use the OrthoDB website to select our species/clade of interest and query the database to retrieve orthologous groups that we can use to build a species tree.</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/orthodb_home.jpg" align="center" width=600/>
+  <figcaption>OrthoDB v11 homepage</figcaption>
+</figure>
+
+<p>Because the beetles are wonderful, we will use them as the example group for exploring the orthology data and building our molecular species tree. We will therefore used the  navigation tool of OrthoDB to narrow our search to available beetle species (Coleoptera): Eukaryota ⇒ Metazoa ⇒ Arthropoda ⇒ Hexapoda ⇒ Insecta ⇒ Holometabola ⇒ Coleoptera.</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/orthodb_nav.jpg" align="center" width=600/>
+</figure>
+
+<p>The <code>Search at:</code> and <code>Species to display:</code> boxes should be automatically updated now to show &ldquo;Coleoptera&rdquo; and &ldquo;all 15 selected&rdquo;. Click <code>Submit</code> with no search terms to first retrieve all orthologous groups delineated across these 15 species of beetles.</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/orthodb_search1.jpg" align="center" width=600/>
+</figure>
+
+<p>For the orthologous groups returned by the query, summary information is displayed:</p>
+<ul>
+<li>Orthologous group names/descriptions (if available)</li>
+<li>Counts of genes and species per orthologous group</li>
+</ul>
+<figure>
+  <img src="../../../assets/images/day2/session2/orthodb_results1.jpg" align="center" width=600/>
+</figure>
+
+<p><strong>Question: How many groups in total are returned? What kinds of orthologous groups would we need to find if we want to build a species tree, and why?</strong></p>
+<details class="done">
+<summary>Answer</summary>
+<p><strong>14753 groups</strong> are returned. However, it is best to use <strong>single-copy orthologues</strong> to build a species tree, because they easily allow to calculate the exact evolutionary distance between sequences. Using multi-copy orthologues drastically complicates things as you cannot be sure of the homology relationships between all the genes (orthology vs paralogy).</p>
+</details>
+<p>We can use the <code>Advanced</code> navigation tool of OrthoDB to narrow our search for orthologous groups that will be useful for building a species phylogeny. Using the &ldquo;Phyloprofile&rdquo; filter we can ask the query to return only orthologous groups that are &ldquo;Present in all species&rdquo; and that are &ldquo;Single-copy in all species&rdquo;. Click <code>Submit</code> with no search terms to retrieve all orthologous groups delineated across these 15 species of beetle, now with the phyloprofile filtered set.</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/orthodb_search2.jpg" align="center" width=600/>
+</figure>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a href="https://www.orthodb.org/?universal=1&amp;level=7041&amp;species=7041&amp;singlecopy=1">Direct URL</a> in case the search with filters failed for you.</p>
+</div>
+<figure>
+  <img src="../../../assets/images/day2/session2/orthodb_results2.jpg" align="center" width=600/>
+  <figcaption>Results of the filtered query</figcaption>
+</figure>
+
+<p><strong>Question: Did the filtering work - how do you know? How many groups in total are now returned? Why are there so few groups compared to the last query that returned all orthologous 14&lsquo;753 groups?</strong></p>
+<details class="done">
+<summary>Answer</summary>
+<p>The filtering worked: we now have only <strong>1225 groups</strong>, all composed of 1 gene per species. The previous query returned more results because a lot of groups contained genes in several but not all species, and these groups were filtered out during this search.</p>
+</details>
+<p>Explore some specific results of your query, <em>e.g.</em> the ones for group <a href="https://www.orthodb.org/?level=7041&amp;species=7041&amp;query=10000at7041">10000at7041</a> described as &ldquo;phosphatidylinositol 4-kinase beta&rdquo;:</p>
+<ul>
+<li>The <strong>Group hierarchy</strong> view allows navigating back up the tree of life to the metazoan last common ancestor</li>
+</ul>
+<figure>
+  <img src="../../../assets/images/day2/session2/orthodb_hierarchy.jpg" align="center"/>
+</figure>
+
+<ul>
+<li><strong>Functional descriptions</strong> list Gene Ontology (GO) terms and InterPro domains that have been mapped to genes belonging to this orthologous group. They provide clues as to the likely function of all genes in the orthologous group</li>
+</ul>
+<figure>
+  <img src="../../../assets/images/day2/session2/orthodb_results3.jpg" align="center" width=500/>
+</figure>
+
+<ul>
+<li><strong>Evolutionary descriptions</strong> summarise the group&rsquo;s phyletic profile, its relative rate of protein sequence divergence, and the &ldquo;average&rdquo; gene architecture (structure in terms of introns and exons and total length in amino acids)</li>
+</ul>
+<figure>
+  <img src="../../../assets/images/day2/session2/orthodb_results4.jpg" align="center" width=500/>
+</figure>
+
+<p>Expand the <strong>Orthologs by organism</strong> table to view members of this orthologous group:</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/orthodb_results5.jpg" align="center" width=600/>
+</figure>
+
+<p><strong>Questions:</strong></p>
+<ul>
+<li><strong>What is the average length (AAs) of these proteins? Are there any substantially longer or shorter proteins than the average?</strong></li>
+<li><strong>Why might some be rather different from the average? What impacts could this have when it comes to using these sequences for building a phylogeny?</strong></li>
+</ul>
+<details class="done">
+<summary>Answer</summary>
+<p>The average length of these proteins is ~930 AAs. There are no substantially longer proteins, but we can notice much shorter proteins (349 AAs, 613 AAs&hellip;) that are displayed with one or two exclamation marks <code>!</code> depending on the length difference. These short proteins might be real but more likely, they indicate an annotation problem (for example a case of automatic annotation that did not pick-up the full length protein). These proteins can severely impact species tree creation because they will cause a bias in the multiple alignment step.</p>
+</details>
+<p>Additional information about each gene can be viewed by clicking on the chevron buttons <code>&gt;</code> or <code>&gt;&gt;</code>, <em>e.g.</em> for the <em>Tribolium castaneum</em> orthologue:</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/orthodb_results6.jpg" align="center" width=600/>
+</figure>
+
+<p>Before we download any orthology data, let&rsquo;s create a working directory for this exercise, starting by opening a terminal on the Workspace if you&rsquo;ve not already got one open. Then, from the <code>/workspace/biodivinfo/</code> directory, create a new directory (<code>mkdir</code>) and navigate into the new directory (<code>cd</code>):</p>
+<div class="highlight"><pre><span></span><code>cd /workspace/biodivinfo/
+mkdir Session2
+cd Session2/
+</code></pre></div>
+<figure>
+  <img src="../../../assets/images/day2/session2/term.jpg" align="center"/>
+</figure>
+
+<p>To build a phylogeny we need to download the sequences: on the top right of each orthologous group view you can access the protein sequences using &ldquo;View Fasta&rdquo;.</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/orthodb_download1.jpg" align="center" width=250/>
+</figure>
+
+<p>A new tab will open displaying the protein sequences, copy the URL of the page so we can use it to download the sequences directly in the next step.</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/orthodb_download2.jpg" align="center"/>
+</figure>
+
+<p>Now fetch the fasta formatted sequences from OrthoDB from the command line using <code>curl</code>, give the downloaded fasta data a filename (-o) using the orthologous group ID &ldquo;10000at7041.fasta&rdquo; and make sure that the URL is placed inside quotes:
+<div class="highlight"><pre><span></span><code>curl -o 10000at7041.fasta &quot;https://data.orthodb.org/v11/fasta?id=10000at7041&amp;species=7041&quot;
+</code></pre></div></p>
+<figure>
+  <img src="../../../assets/images/day2/session2/curl.jpg" align="center" width=600/>
+</figure>
+
+<div class="admonition note">
+<p class="admonition-title">If fetching from OrthoDB failed, you can get the file from the folder with data files for the practical instead</p>
+<div class="highlight"><pre><span></span><code>cp /workspace/biodivinfo/data/Session2/10000at7041.fasta .
+</code></pre></div>
+</div>
+<p>Use the file explorer on the Workspace to view the downloaded fasta file.</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/fasta1.jpg" align="center"/>
+</figure>
+
+<p>We need to replace the <strong>colon</strong> &ldquo;_0:&rdquo; in the protein identifiers with an underscore &ldquo;_0_&rdquo; because some downstream tools do not accept colons in identifiers. We will perform such <strong>replacement</strong> using the command line function <code>sed</code>:
+<div class="highlight"><pre><span></span><code>sed -i &#39;s/_0:/_0_/g&#39; 10000at7041.fasta
+</code></pre></div></p>
+<figure>
+  <img src="../../../assets/images/day2/session2/fasta2.jpg" align="center"/>
+  <figcaption>Note how there are now no longer any colons in the identifiers</figcaption>
+</figure>
+
+<h2 id="building-a-tree-from-single-copy-orthologues">Building a tree from single-copy orthologues</h2>
+<p>There are many different software tools available for sequence alignment and phylogenetics, the logic however remains basically the same no matter the software, we need to:</p>
+<ul>
+<li>Align all the protein sequences as a multiple sequence alignment: we use MAFFT</li>
+<li>Filter/trim the alignment to keep only well-aligned regions: we use TrimAl</li>
+<li>Use the filtered alignment to build a molecular phylogeny: we use RAxML</li>
+</ul>
+<h3 id="multiple-sequence-alignment-using-mafft">Multiple sequence alignment using MAFFT</h3>
+<p>The basic <a href="https://mafft.cbrc.jp/alignment/software/">command</a> for running MAFFT is:</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/mafft_usage.jpg" align="center" width=500/>
+</figure>
+
+<p>We can run MAFFT in the &ldquo;quiet&rdquo; mode to avoid progress reports (<code>--quiet</code>). We can proceed to build the alignment from the command line as follows, naming the output alignment file appropriately by adding <code>.aln.</code> to the output filename:
+<div class="highlight"><pre><span></span><code>mafft --quiet --auto 10000at7041.fasta &gt; 10000at7041.aln.fasta
+</code></pre></div></p>
+<p>Use the file explorer on the Workspace to open the multiple sequence alignment file.</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/mafft_msa.jpg" align="center" width=500/>
+</figure>
+
+<div class="admonition note">
+<p class="admonition-title">If MAFFT failed, you can get the file from the folder instead</p>
+<div class="highlight"><pre><span></span><code>cp /workspace/biodivinfo/data/Session2/10000at7041.aln.fasta .
+</code></pre></div>
+</div>
+<p>You might otherwise use your favourite alignment viewer (<em>e.g.</em> <a href="https://www.jalview.org/">JalView</a>) for a more colourful and meaningful visualisation. To download the file from the Workspace, find the file in the explorer, right-click on the file, and select <code>Download</code>.</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/fasta_download.jpg" align="center" width=400/>
+</figure>
+
+<p>Here are two examples of the JalView visualisation:</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/jalview1.jpg" align="center" width=600/>
+  <figcaption>First ~200 columns of the alignment</figcaption>
+</figure>
+
+<figure>
+  <img src="../../../assets/images/day2/session2/jalview2.jpg" align="center" width=600/>
+  <figcaption>Last ~200 columns of the alignment</figcaption>
+</figure>
+
+<p><strong>Questions:</strong></p>
+<ul>
+<li><strong>From the two visualisations above showing the start and then the end of the alignment - which end seems more complete and well-aligned?</strong></li>
+<li><strong>What do you think an alignment region would need to have in order to be most useful for reconstructing the phylogeny, and why?</strong></li>
+</ul>
+<details class="done">
+<summary>Answer</summary>
+<p>The end of the alignment seems more complete and well-aligned. To reconstruct the phylogeny, an alignment region should not have too many mutations: if there are no common regions between the proteins, they will be impossible to align to each other and it will impossible to build the phylogeny. On the other hand, an alignment without mutations should also be avoided because it contains no signal to discriminate between species.</p>
+</details>
+<h3 id="filtertrim-using-trimal">Filter/trim using TrimAl</h3>
+<p>We could manually go through the multiple sequence alignment and select regions that we think would be the best to use for building the phylogeny - but this is very subjective and not at all reproducible. Therefore there are several tools designed to help select &ldquo;useful&rdquo; regions from multiple sequence alignments and extract them to use for subsequent tree building steps.</p>
+<p>The basic <a href="http://trimal.cgenomics.org/use_of_the_command_line_trimal_v1.2">command</a> for running TrimAl is:</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/trimal_usage.jpg" align="center" width=400/>
+</figure>
+
+<p>TrimAl has many parameters that one can tune depending on your input dataset, as well as a few &ldquo;default&rdquo; options such as:</p>
+<ul>
+<li><code>-nogaps</code>: remove all positions with gaps in the alignment</li>
+<li><code>-strict</code>: use automatic selection on &ldquo;strict&rdquo; mode</li>
+<li><code>-automated1</code>: use a heuristic selection of the automatic method based on similarity statistics</li>
+</ul>
+<p>Here we will use the <code>-automated1</code> option, a heuristic approach that selects the best automatic method to trim a given alignment, and is optimised for trimming alignments that will be analysed by Maximum Likelihood phylogenetic analyses. The output filename we will label with <code>.trm.</code> <em>i.e.</em> after trimming has been performed. We will also ask TrimAl to print out an HTML output to visualise the regions selected and rejected from the input full alignment:
+<div class="highlight"><pre><span></span><code>trimal -in 10000at7041.aln.fasta -out 10000at7041.aln.trm.fasta -automated1 -htmlout 10000at7041.aln.trm.html
+</code></pre></div></p>
+<figure>
+  <img src="../../../assets/images/day2/session2/trimal_ls.jpg" align="center" width=400/>
+</figure>
+
+<p>You can now download (same as how you downloaded the alignment before trimming) and open <strong>10000at7041.aln.trm.html</strong> (<em>e.g.</em> Firefox or another browser) to view the results.</p>
+<div class="admonition note">
+<p class="admonition-title">If trimAl failed, you can get the files from the folder instead</p>
+<div class="highlight"><pre><span></span><code>cp /workspace/biodivinfo/data/Session2/10000at7041.aln.trm.fasta .
+cp /workspace/biodivinfo/data/Session2/10000at7041.aln.trm.html .
+</code></pre></div>
+</div>
+<p>TrimAl&rsquo;s <a href="https://glcdn.githack.com/evogenlab/teaching-repos/biodivinfo/raw/main/data/Session2/10000at7041.aln.trm.html">HTML output</a> shows the regions selected (<code>Selected Cols:</code> highlighted in grey) and the regions rejected during the filtering process:</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/trimal_results.jpg" align="center" width=600/>
+</figure>
+
+<h3 id="phylogeny-building-using-raxml">Phylogeny building using RAxML</h3>
+<p>We will now use the filtered alignment as input to <a href="https://cme.h-its.org/exelixis/web/software/raxml/">RAxML</a> to build a Maximum Likelihood phylogeny. Because we have single-copy orthologues - one from each of our 15 beetle species - we can have some expectation that this gene tree would represent the species tree.</p>
+<p>For reference: species names from their taxonomic identifiers (from OrthoDB):  <!-- AT. Double-check image paths in table --></p>
+<table>
+<thead>
+<tr>
+<th>OrthoDB taxonomic identifiers</th>
+<th>Species name</th>
+<th>Beautiful beetles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>110193_0</td>
+<td><em>Nicrophorus vespilloides</em></td>
+<td><img alt="" src="../../../assets/images/day2/session2/beetle_110193.jpg" width="75" /></td>
+</tr>
+<tr>
+<td>115357_0</td>
+<td><em>Harmonia axyridis</em></td>
+<td><img alt="" src="../../../assets/images/day2/session2/beetle_115357.jpg" width="75" /></td>
+</tr>
+<tr>
+<td>116153_0</td>
+<td><em>Aethina tumida</em></td>
+<td><img alt="" src="../../../assets/images/day2/session2/beetle_116153.jpg" width="75" /></td>
+</tr>
+<tr>
+<td>1629725_0</td>
+<td><em>Oryctes borbonicus</em></td>
+<td><img alt="" src="../../../assets/images/day2/session2/beetle_1629725.jpg" width="75" /></td>
+</tr>
+<tr>
+<td>166361_0</td>
+<td><em>Onthophagus taurus</em></td>
+<td><img alt="" src="../../../assets/images/day2/session2/beetle_166361.jpg" width="75" /></td>
+</tr>
+<tr>
+<td>217634_0</td>
+<td><em>Anoplophora glabripennis</em></td>
+<td><img alt="" src="../../../assets/images/day2/session2/beetle_217634.jpg" width="75" /></td>
+</tr>
+<tr>
+<td>224129_0</td>
+<td><em>Agrilus planipennis</em></td>
+<td><img alt="" src="../../../assets/images/day2/session2/beetle_224129.jpg" width="75" /></td>
+</tr>
+<tr>
+<td>41139_0</td>
+<td><em>Coccinella septempunctata</em></td>
+<td><img alt="" src="../../../assets/images/day2/session2/beetle_41139.jpg" width="75" /></td>
+</tr>
+<tr>
+<td>41895_0</td>
+<td><em>Tribolium madens</em></td>
+<td><img alt="" src="../../../assets/images/day2/session2/beetle_41895.jpg" width="75" /></td>
+</tr>
+<tr>
+<td>50390_0</td>
+<td><em>Diabrotica virgifera</em></td>
+<td><img alt="" src="../../../assets/images/day2/session2/beetle_50390.jpg" width="75" /></td>
+</tr>
+<tr>
+<td>7048_0</td>
+<td><em>Sitophilus oryzae</em></td>
+<td><img alt="" src="../../../assets/images/day2/session2/beetle_7048.jpg" width="75" /></td>
+</tr>
+<tr>
+<td>7054_0</td>
+<td><em>Photinus pyralis</em></td>
+<td><img alt="" src="../../../assets/images/day2/session2/beetle_7054.jpg" width="75" /></td>
+</tr>
+<tr>
+<td>7070_0</td>
+<td><em>Tribolium castaneum</em></td>
+<td><img alt="" src="../../../assets/images/day2/session2/beetle_7070.jpg" width="75" /></td>
+</tr>
+<tr>
+<td>7539_0</td>
+<td><em>Leptinotarsa decemlineata</em></td>
+<td><img alt="" src="../../../assets/images/day2/session2/beetle_7539.jpg" width="75" /></td>
+</tr>
+<tr>
+<td>77166_0</td>
+<td><em>Dendroctonus ponderosae</em></td>
+<td><img alt="" src="../../../assets/images/day2/session2/beetle_77166.jpg" width="75" /></td>
+</tr>
+</tbody>
+</table>
+<p>RAxML has many options! View the summary of parameters/options using the <code>-h</code> flag, for the full explanations you&rsquo;ll need to check out the RAxML manual later:
+<div class="highlight"><pre><span></span><code>raxmlHPC-SSE3 -h | more
+</code></pre></div></p>
+<figure>
+  <img src="../../../assets/images/day2/session2/raxml_usage1.jpg" align="center" width=600/>
+</figure>
+
+<p>The three main required input options are:</p>
+<ul>
+<li><code>-s sequenceFileName</code>: your filtered alignment file</li>
+<li><code>-n outputFileName</code>: the name you want to give the output files</li>
+<li><code>-m substitutionModel</code>: the substitution model you want RAxML to use</li>
+</ul>
+<p>Phylogeny estimation using protein sequences requires the selection of a <strong>protein substitution model</strong>. Divergence among sequences can be modelled with a matrix that describes probabilities of <strong>amino acid substitutions</strong> (mutations that cause one amino acid to be replaced by another). This corresponds to a model of evolution in which amino acids mutate randomly and independently from one another but according to some <strong>predefined probabilities</strong> depending on the properties of the amino acid itself.</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/raxml_usage2.jpg" align="center" width=700/>
+</figure>
+
+<p>We will use the <strong>JTT</strong> (Jones-Taylor-Thornton) with the <strong>GAMMA</strong> model of rate heterogeneity: <code>PROTGAMMAJTT</code>. For speed in the class we will also specify that RAxML should use its rapid bootstrap algorithm to conduct a rapid bootstrap analysis and search for the best-scoring ML tree in one single programme run: <code>-f a</code>, we also need to indicate how many bootstraps RAxML should perform: <code>-N 10</code> (normally many more, but for the class we will perform only 10 samples). For reproducibility of the optimisation steps, RAxML additionally requires us to define the random starting seed for parsimony <em>e.g.</em> <code>-p 12345</code> and for the subsequent ML search <em>e.g.</em> <code>-x 12345</code>.</p>
+<p>Launch RAxML with the options defined for a rapid bootstrap &amp; ML analysis:
+<div class="highlight"><pre><span></span><code>raxmlHPC-SSE3 -s 10000at7041.aln.trm.fasta -f a -N 10 -p 12345 -x 12345 -m PROTGAMMAJTT -n 10000at7041
+</code></pre></div></p>
+<p>RAxML should take less than 2 minutes to estimate the phylogeny with 10 bootstrap samples, printing the progress log to the terminal.</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/raxml_run1.jpg" align="center" width=600/>
+</figure>
+
+<p><strong>Question: What is &ldquo;bootstrap analysis&rdquo; and why would we be interested in running it?</strong></p>
+<details class="done">
+<summary>Answer</summary>
+<p>Bootstrapping is a type of test that uses random sampling with replacement (resampling methods) - it uses sampling with replacement to assess the reliability of sequence-based phylogenies. Bootstrap values in a phylogenetic tree indicate how many times the same branch is observed when repeating the generation of a phylogenetic tree on a resampled set of data and thus give information about the stability of the tree structure (<em>i.e.</em> the branching order). In bootstrap resampling, we generate artificial sequences by randomly sampling sites of the original sequences with replacement to produce a different composition of the data with the same sequence length as the original alignment.</p>
+</details>
+<figure>
+  <img src="../../../assets/images/day2/session2/raxml_run2.jpg" align="center" width=600/>
+</figure>
+
+<div class="admonition note">
+<p class="admonition-title">If RAxML failed, you can get the files from the folder instead</p>
+<div class="highlight"><pre><span></span><code>cp /workspace/biodivinfo/data/Session2/RAxML_bestTree.10000at7041 .
+cp /workspace/biodivinfo/data/Session2/RAxML_bipartitions.10000at7041 .
+cp /workspace/biodivinfo/data/Session2/RAxML_bipartitionsBranchLabels.10000at7041 .
+cp /workspace/biodivinfo/data/Session2/RAxML_bootstrap.10000at7041 .
+cp /workspace/biodivinfo/data/Session2/RAxML_info.10000at7041 .
+</code></pre></div>
+</div>
+<p>RAxML output:</p>
+<ul>
+<li><code>_bestTree</code>: best-supported phylogeny</li>
+<li><code>_bipartitions</code>: best tree with bootstrap results on nodes</li>
+<li><code>_bipartitionsBranchLabels</code>: best tree with bootstrap results on branches</li>
+<li><code>_bootstrap</code>: tree from each bootstrap sample</li>
+<li><code>_info</code>: information on the analysis performed</li>
+</ul>
+<p><img alt="" src="../../../assets/images/day2/session2/raxml_results1.jpg" style="float: top;" />  <!-- AT. Double-check path --></p>
+<p>Now we will visualise the results: the phylogenetic tree. Open the &ldquo;bipartitions&rdquo; file (<code>RAxML_bipartitions.10000at7041</code>) and copy the contents (the newick-format tree).</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/raxml_results2.jpg" align="center" width=600/>
+</figure>
+
+<p>In your browser go to the <strong>iTOL Interactive Tree Of Life</strong> <a href="https://itol.embl.de/">website</a> and open the <code>Upload</code> page from the main navigation bar.</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/itol_homepage.jpg" align="center" width=600/>
+</figure>
+
+<p>Enter a <code>Tree name</code>, <em>e.g.</em> <code>tree1</code>. Paste the RAxML result bipartitions tree into the <code>Tree text:</code> box. Click <code>Upload</code> to load your tree onto the iTOL platform.</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/itol_form.jpg" align="center" width=600/>
+</figure>
+
+<p>By default, your tree should be displayed similarly to this one:</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/itol_tree1.jpg" align="center" width=600/>
+</figure>
+
+<p>Use the <code>Control Panel</code> on the right of the tree to select the <code>Advanced</code> tab and choose to display <code>Bootstraps</code> as <code>Text</code>.</p>
+<figure>
+  <img src="../../../assets/images/day2/session2/itol_tree2.jpg" align="center" width=600/>
+</figure>
+
+<div class="admonition note">
+<p class="admonition-title">If you did not manage to visualise the tree</p>
+<p>You can find it on Gitpod at <code>/workspace/biodivinfo/data/Session2/tree_10000at7041.jpg</code>. Or you can directly see it <a href="https://gitlab.com/evogenlab/teaching-repos/biodivinfo/-/blob/main/data/Session2/tree_10000at7041.jpg">here</a>.</p>
+</div>
+<p><strong>Questions:</strong></p>
+<ul>
+<li><strong>Why would some nodes obtain 100% bootstrap support while others are weaker and others are very low indeed?</strong></li>
+<li><strong>How can we know if our &ldquo;species tree&rdquo;, made from just one single-copy orthologous group, reflects the reality of these species&rsquo; evolutionary relationships?</strong></li>
+<li><strong>What would we need to do next in order to improve the confidence in our molecular &ldquo;species phylogeny&rdquo;?</strong></li>
+</ul>
+<details class="done">
+<summary>Answer</summary>
+<ul>
+<li>Some nodes are very stable and do not change during bootstrap while others do. These weakers nodes indicate that the branching varies and may not be an accurate representation of the species tree</li>
+<li>We can compare the tree with what is known in the literature. Alternatively, we can compare this tree with species tree made from other single-copy orthologous groups. If all the trees concur, this is a very strong indicator of the species&rsquo; evolutionary relationships</li>
+<li>Create trees from other single-copy orthologous groups and reconcile them with a tree from the literature if it exists.</li>
+</ul>
+</details>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="#__consent">Change cookies settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1021 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../2_software/">
+      
+      
+        <link rel="next" href="../4_homology/">
+      
+      
+      <link rel="icon" href="../../../assets/images/general/SIB_logo.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
+    
+    
+      
+        <title>BUSCO - the what, why, and how! - Biodiversity bioinformatics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aim" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../.."> 
+    <strong>Click here to go to latest.</strong>
+  </a>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Biodiversity bioinformatics" class="md-header__button md-logo" aria-label="Biodiversity bioinformatics" data-md-component="logo">
+      
+  <img src="../../../assets/images/general/SIB_logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Biodiversity bioinformatics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BUSCO - the what, why, and how!
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sib-swiss/biodiversity-bioinformatics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sib-swiss/biodiversity-bioinformatics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Biodiversity bioinformatics" class="md-nav__button md-logo" aria-label="Biodiversity bioinformatics" data-md-component="logo">
+      
+  <img src="../../../assets/images/general/SIB_logo.svg" alt="logo">
+
+    </a>
+    Biodiversity bioinformatics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sib-swiss/biodiversity-bioinformatics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sib-swiss/biodiversity-bioinformatics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../precourse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Precourse preparations and Gitpod information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course_schedule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course schedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Day 2 - Orthology-focused arthropod comparative genomics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Day 2 - Orthology-focused arthropod comparative genomics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_general/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General information and course material
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software and resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    BUSCO - the what, why, and how!
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    BUSCO - the what, why, and how!
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aim" class="md-nav__link">
+    Aim
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-outcomes" class="md-nav__link">
+    Learning outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessing-genome-assemblies-for-completeness" class="md-nav__link">
+    Assessing genome assemblies for completeness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessing-genome-annotations-for-completeness" class="md-nav__link">
+    Assessing genome annotations for completeness
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_homology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homology, Orthology, & Paralogy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_reconciliation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gene-Tree-Species-Tree Reconciliation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6_reconstruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gene Family Ancestral State Reconstruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aim" class="md-nav__link">
+    Aim
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-outcomes" class="md-nav__link">
+    Learning outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessing-genome-assemblies-for-completeness" class="md-nav__link">
+    Assessing genome assemblies for completeness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessing-genome-annotations-for-completeness" class="md-nav__link">
+    Assessing genome annotations for completeness
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>BUSCO - the what, why, and how!</h1>
+
+<h2 id="aim">Aim</h2>
+<p>Use BUSCO to assess the quality of different types of genomic data.</p>
+<h2 id="learning-outcomes">Learning outcomes</h2>
+<ul>
+<li>What are the different BUSCO modes and when should you use them?</li>
+<li>What are the BUSCO outputs and where to find them?</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>In 2013 I was working on producing genome assemblies for 16 Anopheles mosquitoes, back then we only had short-read technologies and we needed to find a way to assess the quality of the genomes we were producing. I therefore started developing what eventually became BUSCO, now one of the most widely used tools in genomics for assessing the quality of genome assemblies and annotations in terms of gene completeness.</p>
+<h2 id="assessing-genome-assemblies-for-completeness">Assessing genome assemblies for completeness</h2>
+<p>Before we download any genomics data, let&rsquo;s create a working directory for this exercise, starting by opening a terminal on the Workspace if you&rsquo;ve not already got one open. Then, from the <code>/workspace/biodivinfo/</code> directory, create a new directory (<code>mkdir</code>) and navigate into the new directory (<code>cd</code>):</p>
+<div class="highlight"><pre><span></span><code>cd /workspace/biodivinfo/
+mkdir Session1
+cd Session1/
+</code></pre></div>
+<figure>
+  <img src="../../../assets/images/day2/session1/term.jpg" align="center"/>
+</figure>
+
+<p>Now we can fetch some genome data that we wish to assess. We will work on a small genome so that it does not take too long to run the analyses, hence I have chosen <em>Saccharomyces jurei</em>, a newly discovered fungal species with a small genome of 12 Mbps (GenBank assembly GCA_900290405.1) that can be found on the <a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_900290405.1/">NCBI</a>.</p>
+<p>The summary statistics are already provided by the NCBI, but not the BUSCO evaluations:</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/asmb_stats1.jpg" align="center" width=250/>
+</figure>
+
+<figure>
+  <img src="../../../assets/images/day2/session1/asmb_chrms.jpg" align="center"/>
+</figure>
+
+<p><strong>Questions:</strong></p>
+<ul>
+<li><strong>What is the &ldquo;Scaffold N50&rdquo; and what does it mean?</strong></li>
+<li><strong>What is the &ldquo;Scaffold L50&rdquo; and what does it mean?</strong></li>
+</ul>
+<details class="done">
+<summary>Answer</summary>
+<p>The N50 is the shortest contig length that needs to be included for covering 50% of the genome. The L50 is the count of smallest number of contigs whose length sum makes up half of a genome size. <a href="https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics">More information here</a>.</p>
+</details>
+<p>We will use the <code>curl</code> command and the NCBI Datasets framework to fetch the genome assembly in FASTA format and then unzip the downloaded file:</p>
+<div class="highlight"><pre><span></span><code>curl -OJX GET &quot;https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCA_900290405.1/download?include_annotation_type=GENOME_FASTA&amp;filename=GCA_900290405.1.zip&quot; -H &quot;Accept: application/zip&quot;
+unzip GCA_900290405.1.zip
+</code></pre></div>
+<figure>
+  <img src="../../../assets/images/day2/session1/curl1.jpg" align="center" width=600/>
+</figure>
+
+<p>We will take a look at the first few lines of the FASTA file:
+<div class="highlight"><pre><span></span><code>head ncbi_dataset/data/GCA_900290405.1/GCA_900290405.1_SacJureiUoM1_genomic.fna
+</code></pre></div></p>
+<figure>
+  <img src="../../../assets/images/day2/session1/head.jpg" align="center" width=600/>
+</figure>
+
+<p>Now we have the genome, we can <a href="https://busco.ezlab.org/busco_userguide.html#running-busco">run BUSCO assessments</a> in the genome mode to quantify gene completeness of this genome assembly.</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/running_busco.jpg" align="center" width=600/>
+</figure>
+
+<p>The four main required input options for us therefore are:</p>
+<ul>
+<li><code>-i ncbi_dataset/data/GCA_900290405.1/GCA_900290405.1_SacJureiUoM1_genomic.fna</code></li>
+<li><code>-o SacJurei</code></li>
+<li><code>-m genome</code></li>
+<li><code>-l eukaryota_odb10</code></li>
+</ul>
+<p>We will also specify the job to use 4 CPUs in order to speed up the task: <code>-c 4</code></p>
+<p>The whole command will thus be:
+<div class="highlight"><pre><span></span><code>busco -i ncbi_dataset/data/GCA_900290405.1/GCA_900290405.1_SacJureiUoM1_genomic.fna -o SacJurei -m genome -l eukaryota_odb10 -c 4
+</code></pre></div></p>
+<p>On the terminal you can see which steps BUSCO is executing:</p>
+<ul>
+<li>Configuration</li>
+<li>Dataset download</li>
+<li>Metaeuk: this is the default &ldquo;gene finding&rdquo; approach</li>
+</ul>
+<figure>
+  <img src="../../../assets/images/day2/session1/busco_start1.jpg" align="center" width=600/>
+</figure>
+
+<p><strong>Question: What other &ldquo;gene finding&rdquo; approaches are possible to use with BUSCO?</strong></p>
+<details class="done">
+<summary>Answer</summary>
+<p>2 other gene finding approaches are implemented in BUSCO: <a href="https://academic.oup.com/bioinformatics/article/24/5/637/202844">Augustus</a> (<code>--augustus</code> flag) and <a href="https://academic.oup.com/bioinformatics/article/39/1/btad014/6989621">Miniprot</a> (<code>--miniprot</code> flag).</p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Which <a href="https://busco.ezlab.org/list_of_lineages.html">BUSCO lineage</a> to choose?</p>
+<p>We used the &ldquo;eukaryota&rdquo; dataset:</p>
+<ul>
+<li>eukaryota_odb10: 255 BUSCOs<ul>
+<li>fungi_odb10: 758 BUSCOs<ul>
+<li>ascomycota_odb10: 1706 BUSCOs<ul>
+<li>saccharomycetes_odb10: 2137 BUSCOs</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p><strong>Question: Why would you want to use a more specific or a less specific lineage dataset for your BUSCO evaluations?</strong></p>
+<details class="done">
+<summary>Answer</summary>
+<p>Testing a genome with a more specific lineage dataset will make BUSCO look for clade-specific genes and thus will find more genes. Testing with a less specific lineage dataset will make BUSCO look for genes that are present in a lot of species, thus restricting the number of genes. These genes usually have key functions such as transcription, translation&hellip;</p>
+</details>
+<p>The analysis continues with the following steps being printed to the terminal:</p>
+<ul>
+<li>Once metaeuk (first round) is completed, then</li>
+<li>The hmmsearch step follows</li>
+</ul>
+<figure>
+  <img src="../../../assets/images/day2/session1/busco_hmm_search1.jpg" align="center" width=600/>
+</figure>
+
+<p><strong>Question: What is the hmmsearch step doing?</strong></p>
+<details class="done">
+<summary>Answer</summary>
+<p>It searches for sequence homologs between the BUSCO database and the genome to evaluate.</p>
+</details>
+<p>The analysis continues with the following steps being printed to the terminal:</p>
+<ul>
+<li>The extraction of missing and fragmented buscos</li>
+<li>A second round of metaeuk predictions</li>
+<li>Then a second round of hmmsearch follows</li>
+<li>To finally give the results</li>
+</ul>
+<figure>
+  <img src="../../../assets/images/day2/session1/busco_hmm_search2.jpg" align="center" width=600/>
+</figure>
+
+<p>The analysis should take about 8 minutes to complete.</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/busco_end.jpg" align="center" width=600/>
+</figure>
+
+<div class="admonition note">
+<p class="admonition-title">If BUSCO failed, you can get the file from the folder with data files for the practical instead</p>
+<div class="highlight"><pre><span></span><code>cp /workspace/biodivinfo/data/Session1/SacJurei.zip .
+unzip SacJurei.zip
+</code></pre></div>
+</div>
+<p>Let&rsquo;s explore the results of a typical genome assembly assessment run:
+<div class="highlight"><pre><span></span><code>ls -l SacJurei/
+</code></pre></div></p>
+<figure>
+  <img src="../../../assets/images/day2/session1/ls_results.jpg" align="center" width=600/>
+</figure>
+
+<p>Here&rsquo;s a short summary of the files created by BUSCO:</p>
+<ul>
+<li><strong>logs</strong>: useful if something went wrong</li>
+<li><strong>short_summary.specific.eukaryota_odb10.SacJurei.txt</strong>: open the file in the text editor (pink, explorer)<ul>
+<li>Indicates the lineage dataset that was used (blue)</li>
+<li>Summarises the main results (green)</li>
+<li>Provides some assembly statistics (yellow)</li>
+<li>Lists the versions of all the tools used during this run (orange)</li>
+</ul>
+</li>
+</ul>
+<figure>
+  <img src="../../../assets/images/day2/session1/busco_results1.jpg" align="center" width=600/>
+</figure>
+
+<ul>
+<li><strong>short_summary.specific.eukaryota_odb10.SacJurei.json</strong>: JSON version of the previous file</li>
+<li>
+<p><strong>run_eukaryota_odb10</strong>: folder with the full results from the run</p>
+<p><figure>
+  <img src="../../../assets/images/day2/session1/busco_run_eukaryota.jpg" align="center" width=250/>
+</figure></p>
+<ul>
+<li><strong>busco_sequences:</strong>: PROTEIN and DNA sequences provided<ul>
+<li><strong>fragmented_busco_sequences</strong></li>
+<li><strong>multi_copy_busco_sequences</strong></li>
+<li><strong>single_copy_busco_sequences</strong></li>
+</ul>
+</li>
+<li><strong>full_table.tsv</strong>: details of status (Complete, Duplicated, Fragmented, or Missing), genomic locations, scores, and lengths of all searched BUSCOs</li>
+</ul>
+<p><figure>
+  <img src="../../../assets/images/day2/session1/busco_full_table.jpg" align="center" width=500/>
+</figure></p>
+<ul>
+<li><strong>hmmer_output</strong>: searching predicted proteins against BUSCO profiles<ul>
+<li>initial_run_results</li>
+<li>Rerun_results</li>
+</ul>
+</li>
+<li><strong>metaeuk_output</strong>: the gene prediction results<ul>
+<li>combined_nucl_seqs.fas</li>
+<li>combined_pred_proteins.fas</li>
+<li>initial_results</li>
+<li>refseq_db_rerun.faa</li>
+<li>Rerun_results</li>
+</ul>
+</li>
+<li><strong>missing_busco_list.tsv</strong>: the BUSCOs that were never found</li>
+</ul>
+</li>
+</ul>
+<p>Let&rsquo;s plot the results of a typical genome assembly assessment run. BUSCO provides <a href="https://busco.ezlab.org/busco_userguide.html#companion-scripts">R scripts</a> to produce basic plots that summarise the results. Normally you would want to summarise the results from several assessments, <em>e.g.</em> the same genome with different lineage datasets, or different versions of your genome assembly build with different workflows/parameters, or the assessments of the genome assemblies of several species side-by-side.</p>
+<p>Therefore we need to copy our short summary file into a new folder:</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/busco_rscript.jpg" align="center" width=600/>
+</figure>
+
+<div class="highlight"><pre><span></span><code>mkdir BUSCO_summaries
+cp SacJurei/short_summary.specific.eukaryota_odb10.SacJurei.txt BUSCO_summaries/
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure you are still in the <code>Session1</code> directory! You can use the command <code>pwd</code> to check where you are located.</p>
+</div>
+<p>Run the python script to plot the summary:
+<div class="highlight"><pre><span></span><code>python3 /workspace/mambaforge/envs/course/bin/generate_plot.py -wd BUSCO_summaries
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This command will produce some warnings and errors but you can ignore them - they are caused by an argument deprecation in the <code>ggplot2</code> R package.</p>
+<p><figure>
+  <img src="../../../assets/images/day2/session1/busco_plots1.jpg" align="center" width=600/>
+</figure></p>
+</div>
+<p>Open the resulting plot file (<code>busco_figure.png</code>) using the explorer (left panel of the window). You can zoom in/out by using Ctrl + scroll up/down (mousewheel) on the figure.</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/busco_plots2.jpg" align="center" width=600/>
+</figure>
+
+<p>Let&rsquo;s check some of these apparently missing BUSCOs:</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/busco_missing.jpg" align="center" width=600/>
+</figure>
+
+<p>Search OrthoDB <strong>v10</strong> for the missing BUSCO, <a href="https://v10.orthodb.org/?query=1038775at2759">1038775at2759</a>:</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/orthodb_missing1.jpg" align="center" width=500/>
+</figure>
+
+<p>This gene is the Eukaryotic translation initiation factor 3 subunit F. It has orthologues in 91% of eukaryotes at OrthoDB v10. Of these, it is single-copy in 89%.</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/orthodb_missing2.jpg" align="center" width=500/>
+</figure>
+
+<p>Checking other <em>Saccharomyces</em> species at OrthoDB in the same orthogroup, <a href="https://v10.orthodb.org/?query=1038775at2759">1038775at2759</a>, reveals that only one species of <em>Saccharomycetaceae</em> seems to have an orthologue of Eukaryotic translation initiation factor 3 subunit F.</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/orthodb_missing3.jpg" align="center" width=500/>
+</figure>
+
+<p>This is despite the fact that OrthoDB v10 contains 31 species of <em>Saccharomycetaceae</em>, strongly suggesting a real evolutionary loss of this otherwise highly conserved gene.</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/orthodb_missing4.jpg" align="center" width=500/>
+</figure>
+
+<p>This has been recognised in the <a href="https://academic.oup.com/view-large/106510797">literature</a>, and indeed two of the other missing BUSCOs are the group of Subunit H orthologues, <a href="https://v10.orthodb.org/?query=976469at2759">976469at2759</a>, and the group of Subunit M orthologues, <a href="https://v10.orthodb.org/?query=679771at2759">679771at2759</a>.</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/orthodb_missing4_literature.jpg" align="center" width=600/>
+</figure>
+
+<h2 id="assessing-genome-annotations-for-completeness">Assessing genome annotations for completeness</h2>
+<p>Next we will run an assessment of an annotated protein set, <em>i.e.</em> &ldquo;proteins&rdquo; mode.</p>
+<p><strong>Question: What is the difference between &ldquo;proteins&rdquo; mode and &ldquo;transcriptome&rdquo; mode?</strong></p>
+<details class="done">
+<summary>Answer</summary>
+<p>The &ldquo;proteins&rdquo; mode assesses a gene set, while the &ldquo;transcriptome&rdquo; mode assesses assembled transcripts, which requires either tBLASTn (for prokaryotes) or Metaeuk (for eukaryotes).</p>
+</details>
+<p>For this exercise we will look at the human body louse, <em>Pediculus humanus corporis</em> (GenBank assembly GCF_000006295.1) that can be found on the <a href="https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000006295.1/">NCBI</a>. The NCBI reports a total of 10&lsquo;773 protein-coding genes, which is a somewhat small number of genes compared to many other insect genomes.</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/asmb_stats2.jpg" align="center" width=500/>
+</figure>
+
+<p>We will use the <code>curl</code> command and the NCBI Datasets framework to fetch the genome annotations file in FASTA format and then unzip the downloaded file:</p>
+<div class="highlight"><pre><span></span><code>curl -OJX GET &quot;https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000006295.1/download?include_annotation_type=PROT_FASTA&amp;filename=GCF_000006295.1.zip&quot; -H &quot;Accept: application/zip&quot;
+unzip GCF_000006295.1.zip
+</code></pre></div>
+<figure>
+  <img src="../../../assets/images/day2/session1/curl2.jpg" align="center" width=600/>
+</figure>
+
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If the prompt asks if you wish to replace some files, just say yes, type <code>A</code> and then enter return (this is because we previously downloaded a genome from NCBI).</p>
+</div>
+<p>The four main required input options for us therefore are:</p>
+<ul>
+<li><code>-i ncbi_dataset/data/GCF_000006295.1/protein.faa</code></li>
+<li><code>-o Pediculus</code></li>
+<li><code>-m proteins</code></li>
+<li><code>-l arthropoda_odb10</code></li>
+</ul>
+<p>We will also specify the job to use 4 CPUs in order to speed up the task: <code>-c 4</code></p>
+<p>The whole command will thus be:
+<div class="highlight"><pre><span></span><code>busco -i ncbi_dataset/data/GCF_000006295.1/protein.faa -o Pediculus -m proteins -l arthropoda_odb10 -c 4
+</code></pre></div></p>
+<p>The job starts by configuring the environment, then fetching the &ldquo;arthropoda_odb10&rdquo; lineage dataset, and then launching the hmmsearch jobs:</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/busco_start2.jpg" align="center" width=600/>
+</figure>
+
+<p><strong>Question: Why does BUSCO this time go directly into the hmmsearch steps and not start with the gene prediction (metaeuk) steps?</strong></p>
+<details class="done">
+<summary>Answer</summary>
+<p>The genes are already annotated, hence there is no need to predict them.</p>
+</details>
+<p>When the 1013 searches are complete, the final results are displayed:</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/busco_results2.jpg" align="center" width=600/>
+</figure>
+
+<p><strong>Question: Despite the &ldquo;low&rdquo; number of genes in this genome, what can we say about the completeness of this annotation set?</strong></p>
+<details class="done">
+<summary>Answer</summary>
+<p>This annotation set seems very complete, with a lot of single-copy BUSCOs (96.4%) and very few duplicated (0.3%) or missing (0.8%) BUSCOs.</p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">If BUSCO failed, you can get the file from the folder with data files for the practical instead</p>
+<div class="highlight"><pre><span></span><code>cp /workspace/biodivinfo/data/Session1/Pediculus.zip .
+unzip Pediculus.zip
+</code></pre></div>
+</div>
+<p>Use the explorer to see the output files and folders. Although they are similar to when we ran a genome assembly assessment, note this time there are no &ldquo;metaeuk&rdquo; results folders, only the sequences and the hmmer_output, along with the table, list and summary files.</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/busco_run_arthropoda.jpg" align="center" width=250/>
+</figure>
+
+<p>If you want, you can once again plot the results of the BUSCO run:
+<div class="highlight"><pre><span></span><code>cp Pediculus/short_summary.specific.arthropoda_odb10.Pediculus.txt BUSCO_summaries/
+python3 /workspace/mambaforge/envs/course/bin/generate_plot.py -wd BUSCO_summaries
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will produce a single plot containing the results of both BUSCO runs, SacJurei and Pediculus. Keep in mind that these runs were performed with different modes (genome vs proteins), hence represent different results!</p>
+</div>
+<figure>
+  <img src="../../../assets/images/day2/session1/busco_plots3.jpg" align="center" width=600/>
+</figure>
+
+<p>There are only 8 &ldquo;missing&rdquo; BUSCOs from this annotation set. Searching OrthoDB v10 for the first one, <a href="https://v10.orthodb.org/?query=127998at6656">127998at6656</a>, shows it to be Ribosomal protein L7A/L8, an otherwise highly-conserved gene (168 of 172 arthropods).</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/orthodb_missing5.jpg" align="center" width=500/>
+  <img src="../../../assets/images/day2/session1/orthodb_missing6.jpg" align="center" width=500/>
+</figure>
+
+<p>I thought that this was probably unlikely to be a real missing gene, so I searched the genome using the <em>Drosophila melanogaster</em> orthologue and I found a good hit in the <em>Pediculus</em> genome assembly, in a region where no gene was annotated! I therefore used the available transcriptomics data (blue) to create a manual annotation for this gene (green), so one day when manual annotations make their way into official gene sets at the NCBI this gene will no longer appear as &ldquo;missing&rdquo; when performing an assessment of the annotated gene set.</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/apollo.jpg" align="center" width=600/>
+</figure>
+
+<p>A sequence alignment with orthologues from other species convinces me that I have managed to correctly annotate the complete gene in <em>Pediculus</em>.</p>
+<figure>
+  <img src="../../../assets/images/day2/session1/alignment.jpg" align="center" width=600/>
+</figure>
+
+<div class="admonition note">
+<p class="admonition-title">A cautionary note about alternative transcripts</p>
+<ul>
+<li>We used the <em>Pediculus</em> annotation from the NCBI</li>
+<li>We did no pre-filtering of this annotation set to select just one protein representative per gene</li>
+</ul>
+</div>
+<p><strong>Question: Why would we normally want to select just one protein representative per gene when running an assessment of an annotation set?</strong></p>
+<details class="done">
+<summary>Answer</summary>
+<p>Keeping all the isoforms of a gene will artificially increase the number of Duplicated BUSCOs and lead to a biased assessment of the annotation set.</p>
+</details>
+<p>We can actually count the number of proteins in the <em>Pediculus</em> protein FASTA file to see if this affects our analysis:
+<div class="highlight"><pre><span></span><code>grep -c &#39;&gt;&#39; ncbi_dataset/data/GCF_000006295.1/protein.faa
+</code></pre></div></p>
+<p>This tells us there are 10&lsquo;775 proteins in this file, but remember that the NCBI page indicated that there were 10&lsquo;773 protein-coding genes in this annotation set:</p>
+<ul>
+<li>In this case therefore there is at least one gene, possibly two genes, with alternative transcripts annotated</li>
+<li>So here the impact on our analysis will be negligible if anything</li>
+</ul>
+<p>The NCBI are working on providing &ldquo;reference&rdquo; annotation sets that contain one selected representative protein per gene. For now though you would have to perform the filtering yourself if you wanted to ensure the &ldquo;duplication&rdquo; values produced by BUSCO make sense in terms of reporting real gene duplications rather than alternative protein products of a single gene.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="#__consent">Change cookies settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+    
+  </body>
+</html>
