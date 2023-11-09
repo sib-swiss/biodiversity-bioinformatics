@@ -27,7 +27,7 @@ cd Session1/
 
 Now we can fetch some genome data that we wish to assess. We will work on a small genome so that it does not take too long to run the analyses, hence I have chosen _Saccharomyces jurei_, a newly discovered fungal species with a small genome of 12 Mbps (GenBank assembly GCA_900290405.1) that can be found on the [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_900290405.1/).
 
-The summary statistics are already provided by the NCBI, but not the BUSCO evaluations
+The summary statistics are already provided by the NCBI, but not the BUSCO evaluations:
 
 <figure>
   <img src="../../../assets/images/day2/session1/asmb_stats1.jpg" align="center" width=250/>
@@ -144,11 +144,11 @@ The analysis should take about 8 minutes to complete.
   <img src="../../../assets/images/day2/session1/busco_end1.jpg" align="center" width=600/>
 </figure>
 
-If BUSCO failed, you can get the file from the folder with data files for the practical instead:
-```
-cp /workspace/biodivinfo/data/Session1/SacJurei.zip .
-unzip SacJurei.zip
-```
+!!! note "If BUSCO failed, you can get the file from the folder with data files for the practical instead"
+    ```
+    cp /workspace/biodivinfo/data/Session1/SacJurei.zip .
+    unzip SacJurei.zip
+    ```
 
 Let’s explore the results of a typical genome assembly assessment run:
 ```
@@ -213,18 +213,20 @@ mkdir BUSCO_summaries
 cp SacJurei/short_summary.specific.eukaryota_odb10.SacJurei.txt BUSCO_summaries/
 ```
 
-* Make sure you are still in the `Session1` directory! You can use the command `pwd` to check where you are located
+!!! note
+    Make sure you are still in the `Session1` directory! You can use the command `pwd` to check where you are located.
 
 Run the python script to plot the summary:
 ```
 python3 /workspace/mambaforge/envs/course/bin/generate_plot.py -wd BUSCO_summaries
 ```
 
-* This command will produce some warnings and errors but you can ignore them - they are caused by an argument deprecation in the `ggplot2` R package
+!!! note
+    This command will produce some warnings and errors but you can ignore them - they are caused by an argument deprecation in the `ggplot2` R package.
 
-<figure>
-  <img src="../../../assets/images/day2/session1/busco_plots1.jpg" align="center" width=600/>
-</figure>
+    <figure>
+      <img src="../../../assets/images/day2/session1/busco_plots1.jpg" align="center" width=600/>
+    </figure>
 
 Open the resulting plot file (`busco_figure.png`) using the explorer (left panel of the window). You can zoom in/out by using Ctrl + scroll up/down (mousewheel) on the figure.
 
@@ -250,13 +252,13 @@ This gene is the Eukaryotic translation initiation factor 3 subunit F. It has or
   <img src="../../../assets/images/day2/session1/orthodb_missing2.jpg" align="center" width=500/>
 </figure>
 
-Checking other Saccharomyces species at OrthoDB in the same orthogroup, [1038775at2759](https://v10.orthodb.org/?query=1038775at2759), reveals that only one species of Saccharomycetaceae seems to have an orthologue of Eukaryotic translation initiation factor 3 subunit F.
+Checking other _Saccharomyces_ species at OrthoDB in the same orthogroup, [1038775at2759](https://v10.orthodb.org/?query=1038775at2759), reveals that only one species of _Saccharomycetaceae_ seems to have an orthologue of Eukaryotic translation initiation factor 3 subunit F.
 
 <figure>
   <img src="../../../assets/images/day2/session1/orthodb_missing3.jpg" align="center" width=500/>
 </figure>
 
-This is despite the fact that OrthoDB v10 contains 31 species of Saccharomycetaceae, strongly suggesting a real evolutionary loss of this otherwise highly conserved gene.
+This is despite the fact that OrthoDB v10 contains 31 species of _Saccharomycetaceae_, strongly suggesting a real evolutionary loss of this otherwise highly conserved gene.
 
 <figure>
   <img src="../../../assets/images/day2/session1/orthodb_missing4.jpg" align="center" width=500/>
@@ -277,7 +279,7 @@ Next we will run an assessment of an annotated protein set, _i.e._ "proteins" mo
 ??? done "Answer"
     The "proteins" mode assesses a gene set, while the "transcriptome" mode assesses assembled transcripts, which requires either tBLASTn (for prokaryotes) or Metaeuk (for eukaryotes).
 
-For this exercise we will look at the human body louse, _Pediculus humanus corporis_ (GenBank assembly GCF_000006295.1) that can be found on the [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000006295.1/). The NCBI reports a total of 10’773 protein-coding genes, which is a somewhat small number of genes compared to many other insect genomes
+For this exercise we will look at the human body louse, _Pediculus humanus corporis_ (GenBank assembly GCF_000006295.1) that can be found on the [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000006295.1/). The NCBI reports a total of 10’773 protein-coding genes, which is a somewhat small number of genes compared to many other insect genomes.
 
 <figure>
   <img src="../../../assets/images/day2/session1/asmb_stats2.jpg" align="center" width=500/>
@@ -311,7 +313,7 @@ The whole command will thus be:
 busco -i ncbi_dataset/data/GCF_000006295.1/protein.faa -o Pediculus -m proteins -l arthropoda_odb10 -c 4
 ```
 
-The job starts by configuring the environment, then fetching the "arthropoda_odb10" lineage dataset, and then launching the hmmsearch jobs.
+The job starts by configuring the environment, then fetching the "arthropoda_odb10" lineage dataset, and then launching the hmmsearch jobs:
 
 <figure>
   <img src="../../../assets/images/day2/session1/busco_start2.jpg" align="center" width=600/>
@@ -322,7 +324,7 @@ The job starts by configuring the environment, then fetching the "arthropoda_odb
 ??? done "Answer"
     The genes are already annotated, hence there is no need to predict them.
 
-When the 1013 searches are complete, the final results are displayed
+When the 1013 searches are complete, the final results are displayed:
 
 <figure>
   <img src="../../../assets/images/day2/session1/busco_results2.jpg" align="center" width=600/>
@@ -333,12 +335,11 @@ When the 1013 searches are complete, the final results are displayed
 ??? done "Answer"
     This annotation set seems very complete, with a lot of single-copy BUSCOs (96.4%) and very few duplicated (0.3%) or missing (0.8%) BUSCOs.
 
-
-If BUSCO failed, you can get the file from the folder with data files for the practical instead:
-```
-cp /workspace/biodivinfo/data/Session1/Pediculus.zip .
-unzip Pediculus.zip
-```
+!!! note "If BUSCO failed, you can get the file from the folder with data files for the practical instead"
+    ```
+    cp /workspace/biodivinfo/data/Session1/Pediculus.zip .
+    unzip Pediculus.zip
+    ```
 
 Use the explorer to see the output files and folders. Although they are similar to when we ran a genome assembly assessment, note this time there are no "metaeuk" results folders, only the sequences and the hmmer_output, along with the table, list and summary files.
 
@@ -397,4 +398,4 @@ This tells us there are 10’775 proteins in this file, but remember that the NC
 * In this case therefore there is at least one gene, possibly two genes, with alternative transcripts annotated
 * So here the impact on our analysis will be negligible if anything
 
-The NCBI are working on providing "reference" annotation sets that contain one selected representative protein per gene. For now though you would have to perform the filtering yourself if you wanted to ensure the “duplication” values produced by BUSCO make sense in terms of reporting real gene duplications rather than alternative protein products of a single gene.
+The NCBI are working on providing "reference" annotation sets that contain one selected representative protein per gene. For now though you would have to perform the filtering yourself if you wanted to ensure the "duplication" values produced by BUSCO make sense in terms of reporting real gene duplications rather than alternative protein products of a single gene.

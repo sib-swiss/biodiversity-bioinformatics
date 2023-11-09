@@ -65,12 +65,12 @@ We can use the `Advanced` navigation tool of OrthoDB to narrow our search for or
 ??? done "Answer"
     The filtering worked: we now have only **1225 groups**, all composed of 1 gene per species. The previous query returned more results because a lot of groups contained genes in several but not all species, and these groups were filtered out during this search.
 
-Explore some specific results of your query, _e.g._ the ones for group [10000at7041](https://www.orthodb.org/?level=7041&species=7041&query=10000at7041) described as "phosphatidylinositol 4-kinase beta".
+Explore some specific results of your query, _e.g._ the ones for group [10000at7041](https://www.orthodb.org/?level=7041&species=7041&query=10000at7041) described as "phosphatidylinositol 4-kinase beta":
 
 * The **Group hierarchy** view allows navigating back up the tree of life to the metazoan last common ancestor
 
 <figure>
-  <img src="../../../assets/images/day2/session2/orthodb_hierarchy.jpg" align="center" width=700/>
+  <img src="../../../assets/images/day2/session2/orthodb_hierarchy.jpg" align="center"/>
 </figure>
 
 * **Functional descriptions** list Gene Ontology (GO) terms and InterPro domains that have been mapped to genes belonging to this orthologous group. They provide clues as to the likely function of all genes in the orthologous group
@@ -85,7 +85,7 @@ Explore some specific results of your query, _e.g._ the ones for group [10000at7
   <img src="../../../assets/images/day2/session2/orthodb_results4.jpg" align="center" width=500/>
 </figure>
 
-Expand the **Orthologs by organism** table to view members of this orthologous group.
+Expand the **Orthologs by organism** table to view members of this orthologous group:
 
 <figure>
   <img src="../../../assets/images/day2/session2/orthodb_results5.jpg" align="center" width=600/>
@@ -99,7 +99,7 @@ Expand the **Orthologs by organism** table to view members of this orthologous g
 ??? done "Answer"
     The average length of these proteins is ~930 AAs. There are no substantially longer proteins, but we can notice much shorter proteins (349 AAs, 613 AAs...) that are displayed with one or two exclamation marks `!` depending on the length difference. These short proteins might be real but more likely, they indicate an annotation problem (for example a case of automatic annotation that did not pick-up the full length protein). These proteins can severely impact species tree creation because they will cause a bias in the multiple alignment step.
 
-Additional information about each gene can be viewed by clicking on the chevron buttons `>` or `>>`, _e.g._ for the _Tribolium castaneum_ orthologue.
+Additional information about each gene can be viewed by clicking on the chevron buttons `>` or `>>`, _e.g._ for the _Tribolium castaneum_ orthologue:
 
 <figure>
   <img src="../../../assets/images/day2/session2/orthodb_results6.jpg" align="center" width=600/>
@@ -138,12 +138,12 @@ curl -o 10000at7041.fasta "https://data.orthodb.org/v11/fasta?id=10000at7041&spe
   <img src="../../../assets/images/day2/session2/curl1.jpg" align="center" width=600/>
 </figure>
 
-If fetching from OrthoDB failed, you can get the file from the folder with data files for the practical instead:
-```
-cp /workspace/biodivinfo/data/Session2/10000at7041.fasta .
-```
+!!! note "If fetching from OrthoDB failed, you can get the file from the folder with data files for the practical instead"
+    ```
+    cp /workspace/biodivinfo/data/Session2/10000at7041.fasta .
+    ```
 
-Use the file explorer on the Workspace to view the downloaded fasta file
+Use the file explorer on the Workspace to view the downloaded fasta file.
 
 <figure>
   <img src="../../../assets/images/day2/session2/fasta1.jpg" align="center"/>
@@ -186,10 +186,10 @@ Use the file explorer on the Workspace to open the multiple sequence alignment f
   <img src="../../../assets/images/day2/session2/mafft_msa1.jpg" align="center" width=500/>
 </figure>
 
-If MAFFT did not work you can get the file from the folder instead:
-```
-cp /workspace/biodivinfo/data/Session2/10000at7041.aln.fasta .
-```
+!!! note "If MAFFT did not work you can get the file from the folder instead"
+    ```
+    cp /workspace/biodivinfo/data/Session2/10000at7041.aln.fasta .
+    ```
 
 You might otherwise use your favourite alignment viewer (_e.g._ [JalView](https://www.jalview.org/)) for a more colourful and meaningful visualisation. To download the file from the Workspace, find the file in the explorer, right-click on the file, and select `Download`.
 
@@ -197,7 +197,7 @@ You might otherwise use your favourite alignment viewer (_e.g._ [JalView](https:
   <img src="../../../assets/images/day2/session2/fasta_download.jpg" align="center" width=400/>
 </figure>
 
-Here is an example of the JalView visualisation.
+Here are two examples of the JalView visualisation:
 
 <figure>
   <img src="../../../assets/images/day2/session2/jalview1.jpg" align="center" width=600/>
@@ -219,13 +219,13 @@ Here is an example of the JalView visualisation.
 
 ### Filter/trim using TrimAl
 
-We could manually go through the multiple sequence alignment and select regions that we think would be the best to use for building the phylogeny - but this is very subjective and not at all reproducible. Therefore there are several tools designed to help select "useful" regions from multiple sequence alignments and extract them to use for subsequent tree building steps. The basic [command](http://trimal.cgenomics.org/use_of_the_command_line_trimal_v1.2) for running TrimAl is:
+We could manually go through the multiple sequence alignment and select regions that we think would be the best to use for building the phylogeny - but this is very subjective and not at all reproducible. Therefore there are several tools designed to help select "useful" regions from multiple sequence alignments and extract them to use for subsequent tree building steps.
+
+The basic [command](http://trimal.cgenomics.org/use_of_the_command_line_trimal_v1.2) for running TrimAl is:
 
 <figure>
   <img src="../../../assets/images/day2/session2/trimal_usage.jpg" align="center" width=400/>
 </figure>
-
-
 
 TrimAl has many parameters that one can tune depending on your input dataset, as well as a few "default" options such as:
 
@@ -244,13 +244,13 @@ trimal -in 10000at7041.aln.fasta -out 10000at7041.aln.trm.fasta -automated1 -htm
 
 You can now download (same as how you downloaded the alignment before trimming) and open **10000at7041.aln.trm.html** (_e.g._ Firefox or another browser) to view the results.
 
-If trimAl did not work you can get the files from the folder instead:
-```
-cp /workspace/biodivinfo/data/Session2/10000at7041.aln.trm.fasta .
-cp /workspace/biodivinfo/data/Session2/10000at7041.aln.trm.html .
-```
+!!! note "If trimAl did not work you can get the files from the folder instead"
+    ```
+    cp /workspace/biodivinfo/data/Session2/10000at7041.aln.trm.fasta .
+    cp /workspace/biodivinfo/data/Session2/10000at7041.aln.trm.html .
+    ```
 
-TrimAl’s [HTML output](https://glcdn.githack.com/evogenlab/teaching-repos/biodivinfo/raw/main/data/Session2/10000at7041.aln.trm.html) shows the regions selected (`Selected Cols:` highlighted in grey) and the regions rejected during the filtering process.
+TrimAl’s [HTML output](https://glcdn.githack.com/evogenlab/teaching-repos/biodivinfo/raw/main/data/Session2/10000at7041.aln.trm.html) shows the regions selected (`Selected Cols:` highlighted in grey) and the regions rejected during the filtering process:
 
 <figure>
   <img src="../../../assets/images/day2/session2/trimal_results1.jpg" align="center" width=600/>
@@ -323,24 +323,24 @@ RAxML should take less than 2 minutes to estimate the phylogeny with 10 bootstra
   <img src="../../../assets/images/day2/session2/raxml_run2.jpg" align="center" width=600/>
 </figure>
 
-If RAxML did not work you can get the files from the folder instead:
-```
-cp /workspace/biodivinfo/data/Session2/RAxML_bestTree.10000at7041 .
-cp /workspace/biodivinfo/data/Session2/RAxML_bipartitions.10000at7041 .
-cp /workspace/biodivinfo/data/Session2/RAxML_bipartitionsBranchLabels.10000at7041 .
-cp /workspace/biodivinfo/data/Session2/RAxML_bootstrap.10000at7041 .
-cp /workspace/biodivinfo/data/Session2/RAxML_info.10000at7041 .
-```
+!!! note "If RAxML did not work you can get the files from the folder instead"
+    ```
+    cp /workspace/biodivinfo/data/Session2/RAxML_bestTree.10000at7041 .
+    cp /workspace/biodivinfo/data/Session2/RAxML_bipartitions.10000at7041 .
+    cp /workspace/biodivinfo/data/Session2/RAxML_bipartitionsBranchLabels.10000at7041 .
+    cp /workspace/biodivinfo/data/Session2/RAxML_bootstrap.10000at7041 .
+    cp /workspace/biodivinfo/data/Session2/RAxML_info.10000at7041 .
+    ```
 
 RAxML output:
 
-* \_bestTree: best-supported phylogeny
-* \_bipartitions: best tree with bootstrap results on nodes
-* \_bipartitionsBranchLabels: best tree with bootstrap results on branches
-* \_bootstrap: tree from each bootstrap sample
-* \_info: information on the analysis performed
+* `_bestTree`: best-supported phylogeny
+* `_bipartitions`: best tree with bootstrap results on nodes
+* `_bipartitionsBranchLabels`: best tree with bootstrap results on branches
+* `_bootstrap`: tree from each bootstrap sample
+* `_info`: information on the analysis performed
 
-![](../../../assets/images/day2/session2/raxml_results1.jpg){ style="float: top;" }
+![](../../assets/images/day2/session2/raxml_results1.jpg){ style="float: top;" }  <!-- AT. Double-check path -->
 
 Now we will visualise the results: the phylogenetic tree. Open the "bipartitions" file (`RAxML_bipartitions.10000at7041`) and copy the contents (the newick-format tree).
 
@@ -372,11 +372,8 @@ Use the `Control Panel` on the right of the tree to select the `Advanced` tab an
   <img src="../../../assets/images/day2/session2/itol_tree2.jpg" align="center" width=600/>
 </figure>
 
-If you did not manage to visualise the tree, you can find it on gitpod at:
-```
-/workspace/biodivinfo/data/Session2/tree_10000at7041.jpg
-```
-Or you can directly see it [here](https://gitlab.com/evogenlab/teaching-repos/biodivinfo/-/blob/main/data/Session2/tree_10000at7041.jpg).
+!!! note "If you did not manage to visualise the tree"
+    You can find it on Gitpod at `/workspace/biodivinfo/data/Session2/tree_10000at7041.jpg`. Or you can directly see it [here](https://gitlab.com/evogenlab/teaching-repos/biodivinfo/-/blob/main/data/Session2/tree_10000at7041.jpg).
 
 **Questions:**
 
