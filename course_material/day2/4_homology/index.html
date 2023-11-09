@@ -644,7 +644,7 @@
 <li>How do we have confidence in such a species tree?</li>
 </ul>
 <h2 id="collecting-input-data-from-an-orthology-database">Collecting input data from an orthology database</h2>
-<p><img alt="" src="../../../assets/images/day2/session2/swiss_orthology_logo.jpg" style="float: right;" width="250" />  <!-- AT. Double-check path --></p>
+<p><img alt="" src="../../../assets/images/day2/session2/swiss_orthology_logo.jpg" style="float: right;" width="250" /></p>
 <p>There are many publicly accessible orthology databases, or tools that can be used to delineate orthology with your own datasets. Today, we will use data from <a href="https://www.orthodb.org/">OrthoDB</a>. OrthoDB is part of the <a href="https://swissorthology.ch/service/search">SwissOrthology</a> resource.</p>
 <p>From your browser, search for orthodb.org or go to <a href="https://www.orthodb.org/">https://www.orthodb.org/</a>. We will use the OrthoDB website to select our species/clade of interest and query the database to retrieve orthologous groups that we can use to build a species tree.</p>
 <figure>
@@ -729,7 +729,7 @@
 </ul>
 <details class="done">
 <summary>Answer</summary>
-<p>The average length of these proteins is ~930 AAs. There are no substantially longer proteins, but we can notice much shorter proteins (349 AAs, 613 AAs&hellip;) that are displayed with one or two exclamation marks <code>!</code> depending on the length difference. These short proteins might be real but more likely, they indicate an annotation problem (for example a case of automatic annotation that did not pick-up the full length protein). These proteins can severely impact species tree creation because they will cause a bias in the multiple alignment step.</p>
+<p>The average length of these proteins is <strong>~930 AAs</strong>. There are no substantially longer proteins, but we can notice much shorter proteins (349 AAs, 613 AAs&hellip;) that are displayed with one or two exclamation marks <code>!</code> depending on the length difference. These short proteins might be real but more likely, they indicate an annotation problem (for example a case of automatic annotation that did not pick-up the full length protein). These proteins can severely impact species tree creation because they will cause a bias in the multiple alignment step.</p>
 </details>
 <p>Additional information about each gene can be viewed by clicking on the chevron buttons <code>&gt;</code> or <code>&gt;&gt;</code>, <em>e.g.</em> for the <em>Tribolium castaneum</em> orthologue:</p>
 <figure>
@@ -865,7 +865,7 @@ cp /workspace/biodivinfo/data/Session2/10000at7041.aln.trm.html .
 
 <h3 id="phylogeny-building-using-raxml">Phylogeny building using RAxML</h3>
 <p>We will now use the filtered alignment as input to <a href="https://cme.h-its.org/exelixis/web/software/raxml/">RAxML</a> to build a Maximum Likelihood phylogeny. Because we have single-copy orthologues - one from each of our 15 beetle species - we can have some expectation that this gene tree would represent the species tree.</p>
-<p>For reference: species names from their taxonomic identifiers (from OrthoDB):  <!-- AT. Double-check image paths in table --></p>
+<p>For reference, species names and their OrthoDB taxonomic identifiers:</p>
 <table>
 <thead>
 <tr>
@@ -1005,7 +1005,7 @@ cp /workspace/biodivinfo/data/Session2/RAxML_info.10000at7041 .
 <li><code>_bootstrap</code>: tree from each bootstrap sample</li>
 <li><code>_info</code>: information on the analysis performed</li>
 </ul>
-<p><img alt="" src="../../../assets/images/day2/session2/raxml_results1.jpg" style="float: top;" />  <!-- AT. Double-check path --></p>
+<p><img alt="" src="../../../assets/images/day2/session2/raxml_results1.jpg" style="float: top;" /></p>
 <p>Now we will visualise the results: the phylogenetic tree. Open the &ldquo;bipartitions&rdquo; file (<code>RAxML_bipartitions.10000at7041</code>) and copy the contents (the newick-format tree).</p>
 <figure>
   <img src="../../../assets/images/day2/session2/raxml_results2.jpg" align="center" width=600/>

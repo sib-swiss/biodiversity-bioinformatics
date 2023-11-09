@@ -600,7 +600,7 @@
 <li>What is gene family ancestral state reconstruction trying to achieve and how?</li>
 </ul>
 <h2 id="using-orthologue-counts-to-estimate-ancestral-gene-content">Using orthologue counts to estimate ancestral gene content</h2>
-<p><img alt="" src="../../../assets/images/day2/session4/cafe_logo.jpg" style="float: right;" width="250" />  <!-- AT. Double-check path --></p>
+<p><img alt="" src="../../../assets/images/day2/session4/cafe_logo.jpg" style="float: right;" width="250" /></p>
 <p>There are a huge range of tools designed for ancestral state reconstructions, you may for example have encountered the R package, <a href="http://www.phytools.org/">phytools</a>. Today we will use <a href="https://github.com/hahnlab/CAFE5">CAFE5</a>, a tool specifically designed for working with gene count data to infer ancestral gene contents per gene family.</p>
 <p>Before we reconstruct the ancestral state gene content of our species of interest, let&rsquo;s create a working directory for this exercise, starting by opening a terminal on the Workspace if you&rsquo;ve not already got one open. Then, from the <code>/workspace/biodivinfo/</code> directory, create a new directory (<code>mkdir</code>) and navigate into the new directory (<code>cd</code>):</p>
 <div class="highlight"><pre><span></span><code>cd /workspace/biodivinfo/
@@ -720,8 +720,8 @@ cd Session4/
 <details class="done">
 <summary>Answer</summary>
 <ul>
-<li>The node between species <code>224129</code> and <code>7054</code> shows the most gains (230).</li>
-<li>The node between species <code>115357</code> and <code>7070</code> shows the most losses (116).</li>
+<li>The node between species <code>224129</code> and <code>7054</code> shows the most gains (<strong>230</strong>).</li>
+<li>The node between species <code>115357</code> and <code>7070</code> shows the most losses (<strong>116</strong>).</li>
 </ul>
 </details>
 <p>A reminder of the species in our tree:</p>
@@ -751,7 +751,7 @@ cd Session4/
 <p class="admonition-title">If you did not manage to visualise the tree</p>
 <p>You can find it on Gitpod at <code>/workspace/biodivinfo/data/Session4/tree_10261at7041_CAFE.jpg</code>. Or you can directly see it <a href="https://gitlab.com/evogenlab/teaching-repos/biodivinfo/-/blob/main/data/Session4/tree_10261at7041_CAFE.jpg">here</a>.</p>
 </div>
-<p><img alt="" src="../../../assets/images/day2/session4/itol_labels.jpg" style="float: right;" width="300" />  <!-- AT. Double-check path --></p>
+<p><img alt="" src="../../../assets/images/day2/session4/itol_labels.jpg" style="float: right;" width="300" /></p>
 <p>Terminal nodes (leaves) are labelled with the species (green), CAFE&rsquo;s own numbering of all nodes in the tree (yellow) and finally gene the copy number (pink). Nodes inside the tree are labelled with the internal CAFE numbering of all nodes in the tree (yellow) and the gene the copy number (pink).</p>
 <p>Nodes exhibiting significant changes from their ancestral states are indicated with an asterisk (*). We can now place our CAFE estimates next to our treerecs estimates to compare the results from the two approaches:</p>
 <figure>

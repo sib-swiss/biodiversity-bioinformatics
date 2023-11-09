@@ -604,7 +604,7 @@
 <li>What are gene-tree-species-tree reconciliation algorithms trying to achieve and how?</li>
 </ul>
 <h2 id="building-an-ultrametric-time-calibrated-species-tree">Building an ultrametric time-calibrated species tree</h2>
-<p><img alt="" src="../../../assets/images/day2/session3/ape_logo.jpg" style="float: right;" width="250" />  <!-- AT. Double-check path --></p>
+<p><img alt="" src="../../../assets/images/day2/session3/ape_logo.jpg" style="float: right;" width="250" /></p>
 <p>There are several tools available for converting molecular phylogenies to ultrametric time-calibrated trees. They usually require as input your molecular phylogeny as well as calibration points (estimates usually from fossils about the ranges of likely divergence times) for one or more nodes on the tree. We will use the <strong>chronos</strong> function of the <a href="http://ape-package.ird.fr/">ape</a> package in R.</p>
 <p>Before we explore the tree, let&rsquo;s create a working directory for this exercise, starting by opening a terminal on the Workspace if you&rsquo;ve not already got one open. Then, from the <code>/workspace/biodivinfo/</code> directory, create a new directory (<code>mkdir</code>) and navigate into the new directory (<code>cd</code>):</p>
 <div class="highlight"><pre><span></span><code>cd /workspace/biodivinfo/
@@ -618,7 +618,7 @@ cd Session3/
 <li>Concatenated the trimmed alignments into a superalignment</li>
 <li>Used RAxML to compute, with bootstraps, the molecular species phylogeny</li>
 </ul>
-<p>This took several hours to run, therefore we are not going to try this in the class. Instead, the results are provided for you <a href="https://gitlab.com/evogenlab/teaching-repos/biodivinfo/-/blob/main/data/Session3/OGs-1000-moltree-names-rooted.tre">here</a> and also pasted below, where the tree has been rooted based on the known outgroup species (<code>7054_0</code> &amp; <code>224129_0</code>) and where internal labels and species names have been added to make it easier to interpret and compare with the current understanding of beetle phylogeny.</p>
+<p>This took several hours to run, therefore we are not going to try this in the class. Instead, the results are provided for you <a href="https://gitlab.com/evogenlab/teaching-repos/biodivinfo/-/blob/main/data/Session3/Step1/OGs-1000-moltree-names-rooted.tre">here</a> and also pasted below, where the tree has been rooted based on the known outgroup species (<code>7054_0</code> &amp; <code>224129_0</code>) and where internal labels and species names have been added to make it easier to interpret and compare with the current understanding of beetle phylogeny.</p>
 <p>Here is the molecular species tree in Newick format:
 <div class="highlight"><pre><span></span><code>((((((((50390_0_Diabrotica_virgifera:0.15666,7539_0_Leptinotarsa_decemlineata:0.15804)100:0.05974,217634_0_Anoplophora_glabripennis:0.11339)Chrysomeloidea[100]:0.04091,(7048_0_Sitophilus_oryzae:0.12494,77166_0_Dendroctonus_ponderosae:0.13601)Curculionoidea[100]:0.13858)100:0.02727,116153_0_Aethina_tumida:0.24260)100:0.03487,(115357_0_Harmonia_axyridis:0.06618,41139_0_Coccinella_septempunctata:0.07128)Coccinelloidea[100]:0.17882)88:0.01976,(41895_0_Tribolium_madens:0.02321,7070_0_Tribolium_castaneum:0.02060)Tenebrionoidea[100]:0.28640)100:0.09637,(110193_0_Nicrophorus_vespilloides:0.33251,(1629725_0_Oryctes_borbonicus:0.22252,166361_0_Onthophagus_taurus:0.24064)Scarabaeoidea[100]:0.07437)100:0.05341):0.00483,(224129_0_Agrilus_planipennis:0.31846,7054_0_Photinus_pyralis:0.29250):0.09174)100;
 </code></pre></div></p>
@@ -757,7 +757,7 @@ cd Session3/
   <img src="../../../assets/images/day2/session3/itol_tree3.jpg" align="center" width=600/>
 </figure>
 
-<p><img _="," alt="" src="../../../assets/images/day2/session3/itol_settings2.jpg" style="float: right;" width="300" />  <!-- AT. Double-check path --></p>
+<p><img _="," alt="" src="../../../assets/images/day2/session3/itol_settings2.jpg" style="float: right;" width="300" /></p>
 <p>Use the <code>Advanced Control Panel</code> to display the tree scale in inverted direction:</p>
 <ul>
 <li><code>Internal tree scale</code><ul>
@@ -930,7 +930,7 @@ cp /workspace/biodivinfo/data/Session3/Step2/RAxML_bestTree.10261at7041 .
 <p>As mentioned previously, there was 2 duplication events (3 genes) within species <code>7048_0</code>. 1 duplication (2 genes) event happened within species <code>115357_0</code>. 1 speciation and 1 duplication events (4 genes) happened within species <code>7070_0</code> and <code>41895_0</code>. However, it is very hard to guess where the loss event happened with just a gene tree. It would help to have more information about the species tree.</p>
 </details>
 <h2 id="reconciling-the-gene-and-species-trees">Reconciling the gene and species trees</h2>
-<p><img alt="" src="../../../assets/images/day2/session3/treerecs_logo.jpg" style="float: right;" width="250" />  <!-- AT. Double-check path --></p>
+<p><img alt="" src="../../../assets/images/day2/session3/treerecs_logo.jpg" style="float: right;" width="250" /></p>
 <p>Now we will try to see if an algorithm specifically designed to identify where all speciation nodes, duplication nodes, and loss events have occurred on a gene tree given a species tree agrees or disagrees with your manual assessments.</p>
 <p>The main input requirements for <code>treerecs</code> are:</p>
 <ul>
@@ -1017,9 +1017,9 @@ cp /workspace/biodivinfo/data/Session3/Step2/RAxML_bestTree.10261at7041 .
 <p class="admonition-title"><code>treerecs</code> symbols</p>
 <ul>
 <li>Duplication:
-<img alt="" src="../../../assets/images/day2/session3/treerecs_dup.jpg" style="float: middle;" />  <!-- AT. Double-check path --></li>
+<img alt="" src="../../../assets/images/day2/session3/treerecs_dup.jpg" style="float: middle;" /></li>
 <li>Loss:
-<img alt="" src="../../../assets/images/day2/session3/treerecs_loss.jpg" style="float: middle;" />  <!-- AT. Double-check path --></li>
+<img alt="" src="../../../assets/images/day2/session3/treerecs_loss.jpg" style="float: middle;" /></li>
 </ul>
 </div>
 <p>Let&rsquo;s now compare this with the input gene tree (<code>RAxML_bipartitions.10261at7041</code> - this should still be open in your iTOL browser), we can use iTOL to:</p>
