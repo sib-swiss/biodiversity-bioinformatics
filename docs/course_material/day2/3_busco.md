@@ -13,7 +13,7 @@ In 2013 I was working on producing genome assemblies for 16 Anopheles mosquitoes
 
 ## Assessing genome assemblies for completeness
 
-Before we download any genomics data, let’s create a working directory for this exercise, starting by opening a terminal on the Workspace if you’ve not already got one open. Then, from the `/workspace/biodivinfo/` directory, create a new directory (`mkdir`) and navigate into the new directory (`cd`):
+Before we download any genomics data, let's create a working directory for this exercise, starting by opening a terminal on the Workspace if you've not already got one open. Then, from the `/workspace/biodivinfo/` directory, create a new directory (`mkdir`) and navigate into the new directory (`cd`):
 
 ```
 cd /workspace/biodivinfo/
@@ -22,7 +22,7 @@ cd Session1/
 ```
 
 <figure>
-  <img src="../../../assets/images/day2/session1/term1.jpg" align="center"/>
+  <img src="../../../assets/images/day2/session1/term.jpg" align="center"/>
 </figure>
 
 Now we can fetch some genome data that we wish to assess. We will work on a small genome so that it does not take too long to run the analyses, hence I have chosen _Saccharomyces jurei_, a newly discovered fungal species with a small genome of 12 Mbps (GenBank assembly GCA_900290405.1) that can be found on the [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_900290405.1/).
@@ -34,7 +34,7 @@ The summary statistics are already provided by the NCBI, but not the BUSCO evalu
 </figure>
 
 <figure>
-  <img src="../../../assets/images/day2/session1/asmb_chrms1.jpg" align="center"/>
+  <img src="../../../assets/images/day2/session1/asmb_chrms.jpg" align="center"/>
 </figure>
 
 **Questions:**
@@ -62,7 +62,7 @@ head ncbi_dataset/data/GCA_900290405.1/GCA_900290405.1_SacJureiUoM1_genomic.fna
 ```
 
 <figure>
-  <img src="../../../assets/images/day2/session1/head1.jpg" align="center" width=600/>
+  <img src="../../../assets/images/day2/session1/head.jpg" align="center" width=600/>
 </figure>
 
 Now we have the genome, we can [run BUSCO assessments](https://busco.ezlab.org/busco_userguide.html#running-busco) in the genome mode to quantify gene completeness of this genome assembly.
@@ -141,7 +141,7 @@ The analysis continues with the following steps being printed to the terminal:
 The analysis should take about 8 minutes to complete.
 
 <figure>
-  <img src="../../../assets/images/day2/session1/busco_end1.jpg" align="center" width=600/>
+  <img src="../../../assets/images/day2/session1/busco_end.jpg" align="center" width=600/>
 </figure>
 
 !!! note "If BUSCO failed, you can get the file from the folder with data files for the practical instead"
@@ -150,13 +150,13 @@ The analysis should take about 8 minutes to complete.
     unzip SacJurei.zip
     ```
 
-Let’s explore the results of a typical genome assembly assessment run:
+Let's explore the results of a typical genome assembly assessment run:
 ```
 ls -l SacJurei/
 ```
 
 <figure>
-  <img src="../../../assets/images/day2/session1/ls_results1.jpg" align="center" width=600/>
+  <img src="../../../assets/images/day2/session1/ls_results.jpg" align="center" width=600/>
 </figure>
 
 Here's a short summary of the files created by BUSCO:
@@ -176,7 +176,7 @@ Here's a short summary of the files created by BUSCO:
 * **run_eukaryota_odb10**: folder with the full results from the run
 
 	<figure>
-	  <img src="../../../assets/images/day2/session1/busco_run_eukaryota1.jpg" align="center" width=250/>
+	  <img src="../../../assets/images/day2/session1/busco_run_eukaryota.jpg" align="center" width=250/>
 	</figure>
 
 	* **busco_sequences:**: PROTEIN and DNA sequences provided
@@ -186,7 +186,7 @@ Here's a short summary of the files created by BUSCO:
   * **full_table.tsv**: details of status (Complete, Duplicated, Fragmented, or Missing), genomic locations, scores, and lengths of all searched BUSCOs
 
 	<figure>
-	  <img src="../../../assets/images/day2/session1/busco_full_table1.jpg" align="center" width=500/>
+	  <img src="../../../assets/images/day2/session1/busco_full_table.jpg" align="center" width=500/>
 	</figure>
 
 	* **hmmer_output**: searching predicted proteins against BUSCO profiles
@@ -200,12 +200,12 @@ Here's a short summary of the files created by BUSCO:
 		* Rerun_results
 	* **missing_busco_list.tsv**: the BUSCOs that were never found
 
-Let’s plot the results of a typical genome assembly assessment run. BUSCO provides [R scripts](https://busco.ezlab.org/busco_userguide.html#companion-scripts) to produce basic plots that summarise the results. Normally you would want to summarise the results from several assessments, _e.g._ the same genome with different lineage datasets, or different versions of your genome assembly build with different workflows/parameters, or the assessments of the genome assemblies of several species side-by-side.
+Let's plot the results of a typical genome assembly assessment run. BUSCO provides [R scripts](https://busco.ezlab.org/busco_userguide.html#companion-scripts) to produce basic plots that summarise the results. Normally you would want to summarise the results from several assessments, _e.g._ the same genome with different lineage datasets, or different versions of your genome assembly build with different workflows/parameters, or the assessments of the genome assemblies of several species side-by-side.
 
 Therefore we need to copy our short summary file into a new folder:
 
 <figure>
-  <img src="../../../assets/images/day2/session1/busco_rscript1.jpg" align="center" width=600/>
+  <img src="../../../assets/images/day2/session1/busco_rscript.jpg" align="center" width=600/>
 </figure>
 
 ```
@@ -234,10 +234,10 @@ Open the resulting plot file (`busco_figure.png`) using the explorer (left panel
   <img src="../../../assets/images/day2/session1/busco_plots2.jpg" align="center" width=600/>
 </figure>
 
-Let’s check some of these apparently missing BUSCOs:
+Let's check some of these apparently missing BUSCOs:
 
 <figure>
-  <img src="../../../assets/images/day2/session1/busco_missing1.jpg" align="center" width=600/>
+  <img src="../../../assets/images/day2/session1/busco_missing.jpg" align="center" width=600/>
 </figure>
 
 Search OrthoDB **v10** for the missing BUSCO, [1038775at2759](https://v10.orthodb.org/?query=1038775at2759):
@@ -279,7 +279,7 @@ Next we will run an assessment of an annotated protein set, _i.e._ "proteins" mo
 ??? done "Answer"
     The "proteins" mode assesses a gene set, while the "transcriptome" mode assesses assembled transcripts, which requires either tBLASTn (for prokaryotes) or Metaeuk (for eukaryotes).
 
-For this exercise we will look at the human body louse, _Pediculus humanus corporis_ (GenBank assembly GCF_000006295.1) that can be found on the [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000006295.1/). The NCBI reports a total of 10’773 protein-coding genes, which is a somewhat small number of genes compared to many other insect genomes.
+For this exercise we will look at the human body louse, _Pediculus humanus corporis_ (GenBank assembly GCF_000006295.1) that can be found on the [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000006295.1/). The NCBI reports a total of 10'773 protein-coding genes, which is a somewhat small number of genes compared to many other insect genomes.
 
 <figure>
   <img src="../../../assets/images/day2/session1/asmb_stats2.jpg" align="center" width=500/>
@@ -344,7 +344,7 @@ When the 1013 searches are complete, the final results are displayed:
 Use the explorer to see the output files and folders. Although they are similar to when we ran a genome assembly assessment, note this time there are no "metaeuk" results folders, only the sequences and the hmmer_output, along with the table, list and summary files.
 
 <figure>
-  <img src="../../../assets/images/day2/session1/busco_run_arthropoda1.jpg" align="center" width=250/>
+  <img src="../../../assets/images/day2/session1/busco_run_arthropoda.jpg" align="center" width=250/>
 </figure>
 
 If you want, you can once again plot the results of the BUSCO run:
@@ -370,13 +370,13 @@ There are only 8 "missing" BUSCOs from this annotation set. Searching OrthoDB v1
 I thought that this was probably unlikely to be a real missing gene, so I searched the genome using the _Drosophila melanogaster_ orthologue and I found a good hit in the _Pediculus_ genome assembly, in a region where no gene was annotated! I therefore used the available transcriptomics data (blue) to create a manual annotation for this gene (green), so one day when manual annotations make their way into official gene sets at the NCBI this gene will no longer appear as "missing" when performing an assessment of the annotated gene set.
 
 <figure>
-  <img src="../../../assets/images/day2/session1/apollo1.jpg" align="center" width=600/>
+  <img src="../../../assets/images/day2/session1/apollo.jpg" align="center" width=600/>
 </figure>
 
 A sequence alignment with orthologues from other species convinces me that I have managed to correctly annotate the complete gene in _Pediculus_.
 
 <figure>
-  <img src="../../../assets/images/day2/session1/alignment1.jpg" align="center" width=600/>
+  <img src="../../../assets/images/day2/session1/alignment.jpg" align="center" width=600/>
 </figure>
 
 !!! note "A cautionary note about alternative transcripts"
@@ -393,7 +393,7 @@ We can actually count the number of proteins in the _Pediculus_ protein FASTA fi
 grep -c '>' ncbi_dataset/data/GCF_000006295.1/protein.faa
 ```
 
-This tells us there are 10’775 proteins in this file, but remember that the NCBI page indicated that there were 10’773 protein-coding genes in this annotation set:
+This tells us there are 10'775 proteins in this file, but remember that the NCBI page indicated that there were 10'773 protein-coding genes in this annotation set:
 
 * In this case therefore there is at least one gene, possibly two genes, with alternative transcripts annotated
 * So here the impact on our analysis will be negligible if anything

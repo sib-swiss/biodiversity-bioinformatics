@@ -23,7 +23,7 @@ From your browser, search for orthodb.org or go to [https://www.orthodb.org/](ht
 Because the beetles are wonderful, we will use them as the example group for exploring the orthology data and building our molecular species tree. We will therefore used the  navigation tool of OrthoDB to narrow our search to available beetle species (Coleoptera): Eukaryota ⇒ Metazoa ⇒ Arthropoda ⇒ Hexapoda ⇒ Insecta ⇒ Holometabola ⇒ Coleoptera.
 
 <figure>
-  <img src="../../../assets/images/day2/session2/orthodb_nav1.jpg" align="center" width=600/>
+  <img src="../../../assets/images/day2/session2/orthodb_nav.jpg" align="center" width=600/>
 </figure>
 
 The `Search at:` and `Species to display:` boxes should be automatically updated now to show "Coleoptera" and "all 15 selected". Click `Submit` with no search terms to first retrieve all orthologous groups delineated across these 15 species of beetles.
@@ -60,7 +60,7 @@ We can use the `Advanced` navigation tool of OrthoDB to narrow our search for or
   <figcaption>Results of the filtered query</figcaption>
 </figure>
 
-**Question: Did the filtering work - how do you know? How many groups in total are now returned? Why are there so few groups compared to the last query that returned all orthologous 14’753 groups?**
+**Question: Did the filtering work - how do you know? How many groups in total are now returned? Why are there so few groups compared to the last query that returned all orthologous 14'753 groups?**
 
 ??? done "Answer"
     The filtering worked: we now have only **1225 groups**, all composed of 1 gene per species. The previous query returned more results because a lot of groups contained genes in several but not all species, and these groups were filtered out during this search.
@@ -79,7 +79,7 @@ Explore some specific results of your query, _e.g._ the ones for group [10000at7
   <img src="../../../assets/images/day2/session2/orthodb_results3.jpg" align="center" width=500/>
 </figure>
 
-* **Evolutionary descriptions** summarise the group’s phyletic profile, its relative rate of protein sequence divergence, and the "average" gene architecture (structure in terms of introns and exons and total length in amino acids)
+* **Evolutionary descriptions** summarise the group's phyletic profile, its relative rate of protein sequence divergence, and the "average" gene architecture (structure in terms of introns and exons and total length in amino acids)
 
 <figure>
   <img src="../../../assets/images/day2/session2/orthodb_results4.jpg" align="center" width=500/>
@@ -105,7 +105,7 @@ Additional information about each gene can be viewed by clicking on the chevron 
   <img src="../../../assets/images/day2/session2/orthodb_results6.jpg" align="center" width=600/>
 </figure>
 
-Before we download any genomics data, let’s create a working directory for this exercise, starting by opening a terminal on the Workspace if you’ve not already got one open. Then, from the `/workspace/biodivinfo/` directory, create a new directory (`mkdir`) and navigate into the new directory (`cd`):
+Before we download any genomics data, let's create a working directory for this exercise, starting by opening a terminal on the Workspace if you've not already got one open. Then, from the `/workspace/biodivinfo/` directory, create a new directory (`mkdir`) and navigate into the new directory (`cd`):
 
 ```
 cd /workspace/biodivinfo/
@@ -114,7 +114,7 @@ cd Session2/
 ```
 
 <figure>
-  <img src="../../../assets/images/day2/session2/term1.jpg" align="center"/>
+  <img src="../../../assets/images/day2/session2/term.jpg" align="center"/>
 </figure>
 
 To build a phylogeny we need to download the sequences: on the top right of each orthologous group view you can access the protein sequences using "View Fasta".
@@ -135,7 +135,7 @@ curl -o 10000at7041.fasta "https://data.orthodb.org/v11/fasta?id=10000at7041&spe
 ```
 
 <figure>
-  <img src="../../../assets/images/day2/session2/curl1.jpg" align="center" width=600/>
+  <img src="../../../assets/images/day2/session2/curl.jpg" align="center" width=600/>
 </figure>
 
 !!! note "If fetching from OrthoDB failed, you can get the file from the folder with data files for the practical instead"
@@ -183,7 +183,7 @@ mafft --quiet --auto 10000at7041.fasta > 10000at7041.aln.fasta
 Use the file explorer on the Workspace to open the multiple sequence alignment file.
 
 <figure>
-  <img src="../../../assets/images/day2/session2/mafft_msa1.jpg" align="center" width=500/>
+  <img src="../../../assets/images/day2/session2/mafft_msa.jpg" align="center" width=500/>
 </figure>
 
 !!! note "If MAFFT did not work you can get the file from the folder instead"
@@ -239,7 +239,7 @@ trimal -in 10000at7041.aln.fasta -out 10000at7041.aln.trm.fasta -automated1 -htm
 ```
 
 <figure>
-  <img src="../../../assets/images/day2/session2/trimal_ls1.jpg" align="center" width=400/>
+  <img src="../../../assets/images/day2/session2/trimal_ls.jpg" align="center" width=400/>
 </figure>
 
 You can now download (same as how you downloaded the alignment before trimming) and open **10000at7041.aln.trm.html** (_e.g._ Firefox or another browser) to view the results.
@@ -250,10 +250,10 @@ You can now download (same as how you downloaded the alignment before trimming) 
     cp /workspace/biodivinfo/data/Session2/10000at7041.aln.trm.html .
     ```
 
-TrimAl’s [HTML output](https://glcdn.githack.com/evogenlab/teaching-repos/biodivinfo/raw/main/data/Session2/10000at7041.aln.trm.html) shows the regions selected (`Selected Cols:` highlighted in grey) and the regions rejected during the filtering process:
+TrimAl's [HTML output](https://glcdn.githack.com/evogenlab/teaching-repos/biodivinfo/raw/main/data/Session2/10000at7041.aln.trm.html) shows the regions selected (`Selected Cols:` highlighted in grey) and the regions rejected during the filtering process:
 
 <figure>
-  <img src="../../../assets/images/day2/session2/trimal_results1.jpg" align="center" width=600/>
+  <img src="../../../assets/images/day2/session2/trimal_results.jpg" align="center" width=600/>
 </figure>
 
 ### Phylogeny building using RAxML
@@ -280,7 +280,7 @@ For reference: species names from their taxonomic identifiers (from OrthoDB):  <
 | 7539_0                          | _Leptinotarsa decemlineata_   | ![](../../assets/images/day2/session2/beetle_7539.jpg){width=75}     |
 | 77166_0                         | _Dendroctonus ponderosae_     | ![](../../assets/images/day2/session2/beetle_77166.jpg){width=75}    |
 
-RAxML has many options! View the summary of parameters/options using the `-h` flag, for the full explanations you’ll need to check out the RAxML manual later:
+RAxML has many options! View the summary of parameters/options using the `-h` flag, for the full explanations you'll need to check out the RAxML manual later:
 ```
 raxmlHPC-SSE3 -h | more
 ```
@@ -354,10 +354,10 @@ In your browser go to the **iTOL Interactive Tree Of Life** [website](https://it
   <img src="../../../assets/images/day2/session2/itol_homepage.jpg" align="center" width=600/>
 </figure>
 
-Enter a `Tree name`, e.g. `tree1`. Paste the RAxML result bipartitions tree into the `Tree text:` box. Click `Upload` to load your tree onto the iTOL platform.
+Enter a `Tree name`, _e.g._ `tree1`. Paste the RAxML result bipartitions tree into the `Tree text:` box. Click `Upload` to load your tree onto the iTOL platform.
 
 <figure>
-  <img src="../../../assets/images/day2/session2/itol_form1.jpg" align="center" width=600/>
+  <img src="../../../assets/images/day2/session2/itol_form.jpg" align="center" width=600/>
 </figure>
 
 By default, your tree should be displayed similarly to this one:
@@ -378,10 +378,10 @@ Use the `Control Panel` on the right of the tree to select the `Advanced` tab an
 **Questions:**
 
 * **Why would some nodes obtain 100% bootstrap support while others are weaker and others are very low indeed?**
-* **How can we know if our "species tree", made from just one single-copy orthologous group, reflects the reality of these species’ evolutionary relationships?**
+* **How can we know if our "species tree", made from just one single-copy orthologous group, reflects the reality of these species' evolutionary relationships?**
 * **What would we need to do next in order to improve the confidence in our molecular "species phylogeny"?**
 
 ??? done "Answer"
     * Some nodes are very stable and do not change during bootstrap while others do. These weakers nodes indicate that the branching varies and may not be an accurate representation of the species tree
-    * We can compare the tree with what is known in the literature. Alternatively, we can compare this tree with species tree made from other single-copy orthologous groups. If all the trees concur, this is a very strong indicator of the species’ evolutionary relationships
+    * We can compare the tree with what is known in the literature. Alternatively, we can compare this tree with species tree made from other single-copy orthologous groups. If all the trees concur, this is a very strong indicator of the species' evolutionary relationships
     * Create trees from other single-copy orthologous groups and reconcile them with a tree from the literature if it exists.

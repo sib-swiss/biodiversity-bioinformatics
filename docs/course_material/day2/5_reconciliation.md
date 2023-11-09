@@ -48,7 +48,7 @@ cp /workspace/biodivinfo/data/Session3/Step1/OGs-1000-moltree-names-rooted.tre .
 Now to visualise the tree we will, as before, copy and paste this molecular species phylogeny to upload it to [iTOL](https://itol.embl.de/).
 
 <figure>
-  <img src="../../../assets/images/day2/session3/itol_form1.jpg" align="center" width=600/>
+  <img src="../../../assets/images/day2/session3/itol_form.jpg" align="center" width=600/>
 </figure>
 
 Use the iTOL `Control Panel (Advanced)` to turn on `Display` of `Node IDs` and turn on `Display` as `Text` the `Bootstraps`.
@@ -108,7 +108,7 @@ We could provide multiple calibration points to smooth the tree, but for today w
 TimeTree provides us with an "Adjusted Time" for the pairwise divergence time for _Agrilus Planipennis_ and _Leptinotarsa Decemlineata_ of 256 Million Years Ago (MYA).
 
 <figure>
-  <img src="../../../assets/images/day2/session3/timetree_results1.jpg" align="center" width=600/>
+  <img src="../../../assets/images/day2/session3/timetree_results.jpg" align="center" width=600/>
 </figure>
 
 <br>The R code for running chronos is provided here:
@@ -162,7 +162,7 @@ cp /workspace/biodivinfo/scripts/MolecularTree_to_TimeTree.R .
 Now Let's open the tree file produced by chronos (`Coleoptera_TimeTree.tre`) and use [iTOL](https://itol.embl.de/) to view it (as before), you can find the file in the EXPLORER menu under Session3, copy the Newick formatted tree and go to [iTOL](https://itol.embl.de/) to upload it.
 
 <figure>
-  <img src="../../../assets/images/day2/session3/ape_timetree1.jpg" align="center" width=600/>
+  <img src="../../../assets/images/day2/session3/ape_timetree.jpg" align="center" width=600/>
 </figure>
 
 The default view looks something like this, so we can use the `Advanced Control Panel` to change the views and thereby make comparisons with the literature tree easier.
