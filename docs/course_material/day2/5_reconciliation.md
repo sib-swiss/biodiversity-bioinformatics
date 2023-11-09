@@ -13,7 +13,7 @@ Convert the molecular species phylogeny into an ultrametric time-calibrated spec
 
 There are several tools available for converting molecular phylogenies to ultrametric time-calibrated trees. They usually require as input your molecular phylogeny as well as calibration points (estimates usually from fossils about the ranges of likely divergence times) for one or more nodes on the tree. We will use the **chronos** function of the [ape](http://ape-package.ird.fr/) package in R.
 
-Before we download any genomics data, Let's create a working directory for this exercise, starting by opening a terminal on the Workspace if you've not already got one open. Then, from the `/workspace/biodivinfo/` directory, create a new directory (`mkdir`) and navigate into the new directory (`cd`):
+Before we explore the tree, let's create a working directory for this exercise, starting by opening a terminal on the Workspace if you've not already got one open. Then, from the `/workspace/biodivinfo/` directory, create a new directory (`mkdir`) and navigate into the new directory (`cd`):
 
 ```
 cd /workspace/biodivinfo/
@@ -51,7 +51,7 @@ Now to visualise the tree we will, as before, copy and paste this molecular spec
   <img src="../../../assets/images/day2/session3/itol_form.jpg" align="center" width=600/>
 </figure>
 
-Use the iTOL `Control Panel (Advanced)` to turn on `Display` of `Node IDs` and turn on `Display` as `Text` the `Bootstraps`.
+Use the iTOL `Advanced Control Panel` to turn on `Display` of `Node IDs` and turn on `Display` as `Text` the `Bootstraps`.
 
 <figure>
   <img src="../../../assets/images/day2/session3/itol_settings1.jpg" align="center" width=250/>
@@ -91,7 +91,7 @@ You should be able to find the internal node labels, provided for you on the tre
 </figure>
 
 !!! note
-	Link to [Cai et al. 2022](https://doi.org/10.1098/rsos.211771).
+	 Link to [Cai et al. 2022](https://doi.org/10.1098/rsos.211771).
 
 We can now convert our molecular phylogeny to an ultrametric time-calibrated tree using the `chronos` function of the `ape` package.
 
@@ -159,7 +159,7 @@ cp /workspace/biodivinfo/scripts/MolecularTree_to_TimeTree.R .
   <img src="../../../assets/images/day2/session3/ape_run.jpg" align="center" width=600/>
 </figure>
 
-Now Let's open the tree file produced by chronos (`Coleoptera_TimeTree.tre`) and use [iTOL](https://itol.embl.de/) to view it (as before), you can find the file in the EXPLORER menu under Session3, copy the Newick formatted tree and go to [iTOL](https://itol.embl.de/) to upload it.
+Now let's open the tree file produced by chronos (`Coleoptera_TimeTree.tre`) and use [iTOL](https://itol.embl.de/) to view it (as before), you can find the file in the EXPLORER menu under Session3, copy the Newick formatted tree and go to [iTOL](https://itol.embl.de/) to upload it.
 
 <figure>
   <img src="../../../assets/images/day2/session3/ape_timetree.jpg" align="center" width=600/>
@@ -212,7 +212,7 @@ Use the `Advanced Control Panel` to display the tree scale in inverted direction
 We will now follow the same steps that we did to compute a tree for a universal single-copy orthologous group in Session II, but this time selecting instead an orthologous group that has some species with more than one gene copy and some species missing an orthologue.
 
 !!! note
-    Remember that of the 14Let's753 Coleoptera-level orthologous groups, only 1Let's225 were showing single-copy orthologues in all 15 species. This means that the majority of orthologous groups show some level of dynamism in terms of gene gains and losses across this set of 15 beetle species.
+    Remember that of the 14'753 Coleoptera-level orthologous groups, only 1'225 were showing single-copy orthologues in all 15 species. This means that the majority of orthologous groups show some level of dynamism in terms of gene gains and losses across this set of 15 beetle species.
 
 Browsing OrthoDB I found an example orthologous group where some species have more than one copy and one species is lacking an orthologue: [https://www.orthodb.org/?level=7041&species=7041&query=10261at7041](https://www.orthodb.org/?level=7041&species=7041&query=10261at7041).
 
@@ -239,7 +239,7 @@ Replace the colon "\_0:" in the protein identifiers with an underscore "\_0\_":
 sed -i 's/_0:/_0_/g' 10261at7041.fasta
 ```
 
-!!! note "If it did not work, fetch the fasta file from the data files folder"
+!!! note "If it failed, fetch the fasta file from the data files folder"
     ```
     cp /workspace/biodivinfo/data/Session3/Step2/10261at7041.fasta .
     ```
@@ -292,7 +292,7 @@ While RAxML is running you can download and view the trimmed alignment file (the
 ??? done "Answer"
     These genes probably underwent a duplication very recently. Only a short span of time passed since the duplication, which explains why they are onlly a few differences between the protein sequences.
 
-!!! note "If these steps did not work you can fetch the results files from the data folder instead"
+!!! note "If these steps failed, you can fetch the results files from the data folder instead"
     ```
     cp /workspace/biodivinfo/data/Session3/Step2/10261at7041.aln.fasta .
     cp /workspace/biodivinfo/data/Session3/Step2/10261at7041.aln.trm.fasta .
@@ -318,7 +318,7 @@ Now we open and view the resulting gene tree with bootstrapping support values (
       <img src="../../../assets/images/day2/session3/itol_fam2_tree1.jpg" align="center" width=600/>
     </figure>
 
-To make this gene tree more visually comparable to the species tree, Let's start by properly rooting the tree according to where the known outgroup species (`7054_0` & `224129_0`) branch off from the rest of the species (circled in pink):
+To make this gene tree more visually comparable to the species tree, let's start by properly rooting the tree according to where the known outgroup species (`7054_0` & `224129_0`) branch off from the rest of the species (circled in pink):
 
 <figure>
   <img src="../../../assets/images/day2/session3/itol_fam2_tree2.jpg" align="center" width=600/>

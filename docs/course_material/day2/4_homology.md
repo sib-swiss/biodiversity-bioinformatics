@@ -53,7 +53,7 @@ We can use the `Advanced` navigation tool of OrthoDB to narrow our search for or
 </figure>
 
 !!! note
-    [Direct URL](https://www.orthodb.org/?universal=1&level=7041&species=7041&singlecopy=1) in case the search with filters did not work properly for you.
+    [Direct URL](https://www.orthodb.org/?universal=1&level=7041&species=7041&singlecopy=1) in case the search with filters failed for you.
 
 <figure>
   <img src="../../../assets/images/day2/session2/orthodb_results2.jpg" align="center" width=600/>
@@ -105,7 +105,7 @@ Additional information about each gene can be viewed by clicking on the chevron 
   <img src="../../../assets/images/day2/session2/orthodb_results6.jpg" align="center" width=600/>
 </figure>
 
-Before we download any genomics data, let's create a working directory for this exercise, starting by opening a terminal on the Workspace if you've not already got one open. Then, from the `/workspace/biodivinfo/` directory, create a new directory (`mkdir`) and navigate into the new directory (`cd`):
+Before we download any orthology data, let's create a working directory for this exercise, starting by opening a terminal on the Workspace if you've not already got one open. Then, from the `/workspace/biodivinfo/` directory, create a new directory (`mkdir`) and navigate into the new directory (`cd`):
 
 ```
 cd /workspace/biodivinfo/
@@ -186,7 +186,7 @@ Use the file explorer on the Workspace to open the multiple sequence alignment f
   <img src="../../../assets/images/day2/session2/mafft_msa.jpg" align="center" width=500/>
 </figure>
 
-!!! note "If MAFFT did not work you can get the file from the folder instead"
+!!! note "If MAFFT failed, you can get the file from the folder instead"
     ```
     cp /workspace/biodivinfo/data/Session2/10000at7041.aln.fasta .
     ```
@@ -244,7 +244,7 @@ trimal -in 10000at7041.aln.fasta -out 10000at7041.aln.trm.fasta -automated1 -htm
 
 You can now download (same as how you downloaded the alignment before trimming) and open **10000at7041.aln.trm.html** (_e.g._ Firefox or another browser) to view the results.
 
-!!! note "If trimAl did not work you can get the files from the folder instead"
+!!! note "If trimAl failed, you can get the files from the folder instead"
     ```
     cp /workspace/biodivinfo/data/Session2/10000at7041.aln.trm.fasta .
     cp /workspace/biodivinfo/data/Session2/10000at7041.aln.trm.html .
@@ -323,7 +323,7 @@ RAxML should take less than 2 minutes to estimate the phylogeny with 10 bootstra
   <img src="../../../assets/images/day2/session2/raxml_run2.jpg" align="center" width=600/>
 </figure>
 
-!!! note "If RAxML did not work you can get the files from the folder instead"
+!!! note "If RAxML failed, you can get the files from the folder instead"
     ```
     cp /workspace/biodivinfo/data/Session2/RAxML_bestTree.10000at7041 .
     cp /workspace/biodivinfo/data/Session2/RAxML_bipartitions.10000at7041 .
