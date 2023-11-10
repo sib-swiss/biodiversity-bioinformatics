@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="../4_group_function/">
+      
       
       
       <link rel="icon" href="../../../assets/images/general/SIB_logo.svg">
@@ -16,7 +18,7 @@
     
     
       
-        <title>6 reconstruction - Biodiversity bioinformatics</title>
+        <title>Function of duplicated genes - Biodiversity bioinformatics</title>
       
     
     
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              6 reconstruction
+              Function of duplicated genes
             
           </span>
         </div>
@@ -444,18 +446,20 @@
       
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -469,7 +473,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Day 3 - Duplication of genes and genomes, expression
@@ -516,6 +520,123 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3_gene_function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Finding information on gene function at small scale
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_group_function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Finding information about function of a group of genes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Function of duplicated genes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Function of duplicated genes
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aim" class="md-nav__link">
+    Aim
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-outcome" class="md-nav__link">
+    Learning outcome
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    Exercise
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -555,29 +676,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#learning-outcomes" class="md-nav__link">
-    Learning outcomes
+  <a href="#learning-outcome" class="md-nav__link">
+    Learning outcome
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-orthologue-counts-to-estimate-ancestral-gene-content" class="md-nav__link">
-    Using orthologue counts to estimate ancestral gene content
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comparing-ancestral-gene-content-estimates-with-reconciliation-results" class="md-nav__link">
-    Comparing ancestral gene content estimates with reconciliation results
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#congratulations-you-made-it-to-the-end" class="md-nav__link">
-    Congratulations, you made it to the end!
+  <a href="#exercise" class="md-nav__link">
+    Exercise
   </a>
   
 </li>
@@ -600,182 +707,56 @@
   
 
 
+  <h1>Function of duplicated genes</h1>
+
 <h2 id="aim">Aim</h2>
-<p>Estimate ancestral gene copy numbers given the species phylogeny and counts of orthologous genes present in extant species.</p>
-<h2 id="learning-outcomes">Learning outcomes</h2>
-<ul>
-<li>What is the difference between tree reconciliation and state reconstruction?</li>
-<li>What is gene family ancestral state reconstruction trying to achieve and how?</li>
-</ul>
-<h2 id="using-orthologue-counts-to-estimate-ancestral-gene-content">Using orthologue counts to estimate ancestral gene content</h2>
-<p><img alt="" src="../../../assets/images/day2/session4/cafe_logo.jpg" style="float: right;" width="250" /></p>
-<p>There are a huge range of tools designed for ancestral state reconstructions, you may for example have encountered the R package, <a href="http://www.phytools.org/">phytools</a>. Today we will use <a href="https://github.com/hahnlab/CAFE5">CAFE5</a>, a tool specifically designed for working with gene count data to infer ancestral gene contents per gene family.</p>
-<p>Before we reconstruct the ancestral state gene content of our species of interest, let&rsquo;s create a working directory for this exercise, starting by opening a terminal on the Workspace if you&rsquo;ve not already got one open. Then, from the <code>/workspace/biodivinfo/</code> directory, create a new directory (<code>mkdir</code>) and navigate into the new directory (<code>cd</code>):</p>
-<div class="highlight"><pre><span></span><code>cd /workspace/biodivinfo/
-mkdir Session4
-cd Session4/
-</code></pre></div>
-<p>We will continue to work with the same dataset of orthologous groups delineated across 15 beetles from OrthoDB. The main input requirements for CAFE are:</p>
-<ul>
-<li>An ultrametric time-calibrated species tree<ul>
-<li>We have the <strong>ultrametric time-calibrated species tree</strong> we made earlier: <code>Coleoptera_TimeTree_IDs.tre</code></li>
-<li>This is a version with just the species identifiers not the names. You can fetch it from the data folder:
-<div class="highlight"><pre><span></span><code>cp /workspace/biodivinfo/data/Session4/Coleoptera_TimeTree_IDs.tre .
-</code></pre></div></li>
-</ul>
-</li>
-<li>A table of counts of orthologues per species<ul>
-<li>This table was obtained by downloading and parsing the full table of orthology data from OrthoDB to extract counts of genes per species for <em>Coleoptera</em>-level orthogroups, you can fetch these pre-processed data here:
-<div class="highlight"><pre><span></span><code>cp /workspace/biodivinfo/data/Session4/Coleoptera_OGs.tsv .
-</code></pre></div></li>
-<li>
-<p>The table contains rows of orthogroups (blue) with columns of species (green) and all the counts of orthologues per orthogroup per species</p>
-<ul>
-<li>For the class the full set of <strong>14&lsquo;753</strong> orthogroups has been first filtered to select only orthologous groups found in more than 90% of species (with no restriction on gene copy-number), leaving <strong>6&lsquo;824</strong> orthogroups. Note that the <strong>species names/identifiers</strong> must be the same as those we have in our <strong>ultrametric time-calibrated species phylogeny</strong></li>
-</ul>
-<p><figure>
-  <img src="../../../assets/images/day2/session4/orthologues_counts.jpg" align="center" width=600/>
-</figure></p>
-</li>
-</ul>
-</li>
-</ul>
-<p>Start by checking out what <code>CAFE</code> needs as command-line options, input, and output names etc. in order to perform an ancestral state reconstruction:</p>
-<div class="highlight"><pre><span></span><code>cafe5 -h
-</code></pre></div>
-<figure>
-  <img src="../../../assets/images/day2/session4/cafe_usage.jpg" align="center" width=600/>
-</figure>
-
-<p>The main input that CAFE needs:</p>
-<ul>
-<li><code>-i</code>, <code>--infile</code>: path to tab delimited gene families file to be analysed</li>
-<li><code>-t</code>, <code>--tree</code>: path to file containing Newick formatted tree</li>
-</ul>
-<p>Putting this all together we have the following:
-<div class="highlight"><pre><span></span><code>cafe5 -i Coleoptera_OGs.tsv -t Coleoptera_TimeTree_IDs.tre
+<p>In this exercise, we will do something similar to what we did in the exercise 2 but for a quite different set of genes.</p>
+<h2 id="learning-outcome">Learning outcome</h2>
+<p>Compare and understand the differences between different kinds of input data and the results.</p>
+<h2 id="exercise">Exercise</h2>
+<p>We have used the <a href="http://ohnologs.curie.fr/">OHNOLOGS database</a> in which you can find lists of genes retained from different Whole Genome Duplications (WGD) in several vertebrate genomes. In this case, we have downloaded the list of <strong>zebrafish</strong> genes that were retained after the teleost-specific WGD (3R). Moreover, we have retrieved the orthologs of these zebrafish 3R retained genes in <strong>mouse</strong>. As mice are not teleosts, their genome hasn&rsquo;t duplicated genes resulting from the 3R WGD, but we can retrieve the ortholog genes of those that were retained in the 3R in zebrafish.</p>
+<p>In the <code>/data</code> folder of the Gitpod workspace, you can find two files:
+<code>Drerio3Rohnologs_7955.tsv</code>: zebrafish genes retained after the 3R
+<code>Drerio3Rohnologs_10090.tsv</code>: mouse orthologs of these genes</p>
+<p>Check the number of genes in each list. You can do this with:
+<div class="highlight"><pre><span></span><code>wc -l Drerio3Rohnologs_*
 </code></pre></div></p>
-<figure>
-  <img src="../../../assets/images/day2/session4/cafe_run.jpg" align="center" width=600/>
-</figure>
-
-<p>CAFE uses a <strong>birth and death process</strong> to model gene gain and loss across a user-specified phylogenetic tree. The distribution of family sizes generated under this model provides a basis for assessing the <strong>significance of the observed family size differences</strong> among taxa. Estimating Lambda (the traditional running of CAFE) performs a maximum likelihood calculation to estimate the most likely rate of change across the entire tree, given all the families and their counts</p>
-<p>For a typical CAFE analysis, users are most interested in determining two things:</p>
-<ul>
-<li>Which gene families/orthogroups are rapidly evolving?</li>
-<li>On which branches of the tree these families are rapidly evolving?</li>
-</ul>
-<p>By default, CAFE creates its outputs into a folder called &ldquo;results&rdquo;:
-<div class="highlight"><pre><span></span><code>ls -l /workspace/biodivinfo/Session4/results
-</code></pre></div></p>
-<figure>
-  <img src="../../../assets/images/day2/session4/cafe_results1.jpg" align="center" width=250/>
-</figure>
-
-<div class="admonition note">
-<p class="admonition-title">If CAFE failed, you can get the file from the folder with data files for the practical instead</p>
-<div class="highlight"><pre><span></span><code>cp -r /workspace/biodivinfo/data/Session4/results .
-</code></pre></div>
-</div>
-<p>The <code>Base_asr.tre</code> output file contains all orthogroups with the ancestral gene counts mapped to the species tree. You might recognise the first tree as the orthogroup we used to build our first species tree (<code>10000at7041)</code>.</p>
-<figure>
-  <img src="../../../assets/images/day2/session4/cafe_results2.jpg" align="center" width=600/>
-</figure>
-
-<p>We can get an overview of gains and losses across all families using a script provided by CAFE, <code>cafe5_draw_tree.py</code>:
-<div class="highlight"><pre><span></span><code>wget https://raw.githubusercontent.com/hahnlab/CAFE5/master/docs/tutorial/cafe5_draw_tree.py
-</code></pre></div></p>
-<div class="admonition note">
-<p class="admonition-title">You can also fetch the python script from the folder with data files for the practical</p>
-<div class="highlight"><pre><span></span><code>cp /workspace/biodivinfo/scripts/cafe5_draw_tree.py .
-</code></pre></div>
-</div>
-<figure>
-  <img src="../../../assets/images/day2/session4/cafe_git.jpg" align="center" width=600/>
-</figure>
-
-<p>Start by checking out what are the script parameters:
-<div class="highlight"><pre><span></span><code>python cafe5_draw_tree.py -h
-</code></pre></div></p>
-<figure>
-  <img src="../../../assets/images/day2/session4/cafe_script.jpg" align="center" width=600/>
-</figure>
-
-<p>First we can plot the gains (Increase) across the tree:
-<div class="highlight"><pre><span></span><code>python cafe5_draw_tree.py -i results/Base_clade_results.txt -d results/Base_report.cafe -y Increase -o CAFE_gains_tree.png
-</code></pre></div></p>
-<p>And now we can plot the losses (Decrease) across the tree:
-<div class="highlight"><pre><span></span><code>python cafe5_draw_tree.py -i results/Base_clade_results.txt -d results/Base_report.cafe -y Decrease -o CAFE_losses_tree.png
-</code></pre></div></p>
-<figure>
-  <img src="../../../assets/images/day2/session4/cafe_script_run.jpg" align="center" width=600/>
-</figure>
-
-<p>The <code>.png</code> output files should be in your working directory, you can open them in Gitpod to view numbers of families showing gains or losses across the species tree.</p>
-<figure>
-  <img src="../../../assets/images/day2/session4/cafe_trees.jpg" align="center" width=600/>
-</figure>
-
-<div class="admonition note">
-<p class="admonition-title">High-resolution version</p>
-<p>You can find a better version of the figure on Gitpod at <code>/workspace/biodivinfo/data/Session4/CAFE_gains_tree.png</code> and <code>/workspace/biodivinfo/data/Session4/CAFE_losses_tree.png</code>. Or you can also see them here: <a href="https://gitlab.com/evogenlab/teaching-repos/biodivinfo/-/blob/main/data/Session4/CAFE_gains_tree.png">gains</a> &amp; <a href="https://gitlab.com/evogenlab/teaching-repos/biodivinfo/-/blob/main/data/Session4/CAFE_losses_tree.png">losses</a></p>
-</div>
 <p><strong>Questions:</strong></p>
 <ul>
-<li><strong>Which internal node shows the most gains?</strong></li>
-<li><strong>Which internal node shows the most losses?</strong></li>
+<li>Why do you think they have a different number of genes?</li>
+<li>Why does the zebrafish file have roughly twice the number of genes in the mouse file?</li>
+<li>Why doesn&rsquo;t it have exactly twice as many genes?</li>
 </ul>
 <details class="done">
 <summary>Answer</summary>
+</details>
+<p>Do a GO enrichment analysis with <a href="https://www.pantherdb.org/">PANTHER</a> of the zebrafish genes as we did in exercise 2.</p>
+<p><strong>Questions:</strong></p>
 <ul>
-<li>The node between species <code>224129</code> and <code>7054</code> shows the most gains (<strong>230</strong>).</li>
-<li>The node between species <code>115357</code> and <code>7070</code> shows the most losses (<strong>116</strong>).</li>
+<li>What kind of GO terms do we see enriched in this list?</li>
+<li>What does it tell us about the function of these genes?</li>
+<li>Is it different from what we found with the one-to-one orthologs list on exercise 2?</li>
 </ul>
-</details>
-<p>A reminder of the species in our tree:</p>
-<figure>
-  <img src="../../../assets/images/day2/session4/species_tree.jpg" align="center" width=600/>
-</figure>
-
-<h2 id="comparing-ancestral-gene-content-estimates-with-reconciliation-results">Comparing ancestral gene content estimates with reconciliation results</h2>
-<p>As a final step we can compare the results from our previous gene-tree-species-tree reconciliation of orthogroup <code>10261at7041</code> with those from gene family ancestral state reconstruction.</p>
-<p>Extract the gain-loss annotated tree for <code>10261at7041</code> from the CAFE results:
-<div class="highlight"><pre><span></span><code>grep 10261at7041 results/Base_asr.tre
-</code></pre></div></p>
-<figure>
-  <img src="../../../assets/images/day2/session4/grep_tree.jpg" align="center" width=600/>
-</figure>
-
-<p>Copy the output of the previous <code>grep</code> command (which is a Newick tree) and open it in iTOL as we did before - note that the Newick tree starts with the first open parenthesis and ends with the semicolon. Use the <code>Advanced Control Panel</code> to Display the Node IDs and view internal node annotations.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can also find the Newick file on gitpod at: <code>/workspace/biodivinfo/data/Session4/10261at7041_reconstruction.nwk</code></p>
-</div>
-<figure>
-  <img src="../../../assets/images/day2/session4/itol_settings.jpg" align="center" width=250/>
-</figure>
-
-<div class="admonition note">
-<p class="admonition-title">If you did not manage to visualise the tree</p>
-<p>You can find it on Gitpod at <code>/workspace/biodivinfo/data/Session4/tree_10261at7041_CAFE.jpg</code>. Or you can directly see it <a href="https://gitlab.com/evogenlab/teaching-repos/biodivinfo/-/blob/main/data/Session4/tree_10261at7041_CAFE.jpg">here</a>.</p>
-</div>
-<p><img alt="" src="../../../assets/images/day2/session4/itol_labels.jpg" style="float: right;" width="300" /></p>
-<p>Terminal nodes (leaves) are labelled with the species (green), CAFE&rsquo;s own numbering of all nodes in the tree (yellow) and finally gene the copy number (pink). Nodes inside the tree are labelled with the internal CAFE numbering of all nodes in the tree (yellow) and the gene the copy number (pink).</p>
-<p>Nodes exhibiting significant changes from their ancestral states are indicated with an asterisk (*). We can now place our CAFE estimates next to our treerecs estimates to compare the results from the two approaches:</p>
-<figure>
-  <img src="../../../assets/images/day2/session4/itol_tree.jpg" align="center"/>
-</figure>
-
-<p><strong>Question: Do the ancestral state reconstructions results (<code>CAFE</code>) agree with the tree reconciliation events (<code>treerecs</code> - after asking it to ignore low-confidence nodes)?</strong></p>
 <details class="done">
 <summary>Answer</summary>
-<p>Yes, they perfectly agree with each other!</p>
 </details>
-<p><br></p>
-<h1 id="congratulations-you-made-it-to-the-end">Congratulations, you made it to the end!</h1>
-<figure>
-  <img src="../../../assets/images/day2/session4/end.jpg" align="center"/>
-</figure>
+<p>Do it again with the mouse orthologs.</p>
+<p><strong>Question: Do we get similar results? Why?</strong></p>
+<details class="done">
+<summary>Answer</summary>
+</details>
+<p>To further explore the function of these genes, do a <a href="https://www.bgee.org/analysis/top-anat/">TopAnat</a> for the zebrafish and the mouse lists.</p>
+<p><strong>Questions:</strong></p>
+<ul>
+<li>What kind of anatomical entities do we see enriched in the zebrafish TopAnat?</li>
+<li>Do they make sense given what we saw in the GO enrichment?</li>
+<li>What can we say about the function of this set of genes?</li>
+<li>Do we see the same in the mouse list? Why?</li>
+</ul>
+<details class="done">
+<summary>Answer</summary>
+</details>
+<p>We arrived at the end of this course. Now, we would like to invite you to debate about what we just learned and about whatever question you may have. You can also ask us about specific questions related to your work if you are interested.</p>
 
 
 
