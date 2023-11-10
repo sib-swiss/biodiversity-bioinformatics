@@ -31,9 +31,9 @@ Authenticate your login with your gitlab/github credentials!
 
 3. Open the desired repository in Gitpod: add `gitpod.io/#` at the beginning of the repository URL or...
 
-	* Click [here]() to directly open Day1 repo in Gitpod
+	* Click [here](https://gitpod.io/#https://github.com/DessimozLab/SIBBiodiversityBioinformatics2023) to directly open Day1 repo in Gitpod
 	* Click [here](https://gitpod.io/#https://gitlab.com/evogenlab/teaching-repos/biodivinfo) to directly open Day2 repo in Gitpod
-	* Click [here]() to directly open Day3 repo in Gitpod
+	* Click [here](https://gitpod.io/#https://github.com/BgeeDB/Biodiversity-Bioinformatics) to directly open Day3 repo in Gitpod
 
 ## Using Gitpod
 
