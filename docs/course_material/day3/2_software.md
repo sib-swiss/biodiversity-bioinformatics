@@ -37,7 +37,7 @@ These links are provided for information only, they are not needed now for the p
 **R**
 
 * [Website](https://www.R-project.org/)
-* There are no publication for R itself but you can [cite it](https://cran.r-project.org/doc/FAQ/R-FAQ.html#Citing-R)
+* There are no publication for R itself but you should still [cite it](https://cran.r-project.org/doc/FAQ/R-FAQ.html#Citing-R)
 * [Userguide](https://cran.r-project.org/manuals.html)
 
 **ape package**
@@ -49,7 +49,7 @@ These links are provided for information only, they are not needed now for the p
 **BgeeCall package**
 
 * [Website](https://github.com/BgeeDB/BgeeCall)
-* There are no publication for the package itself but you can [cite it](https://bioconductor.org/packages/release/bioc/html/BgeeCall.html)
+* There are no publication for the package itself but you should still [cite it](https://bioconductor.org/packages/release/bioc/html/BgeeCall.html)
 * [Userguide](https://bioconductor.org/packages/release/bioc/vignettes/BgeeCall/inst/doc/bgeecall-manual.html)
 
 **BgeeDB package**
@@ -61,5 +61,5 @@ These links are provided for information only, they are not needed now for the p
 **ggfortify package**
 
 * [Website](https://github.com/sinhrks/ggfortify)
-* There are no publication for the package itself but you can [cite it](https://github.com/sinhrks/ggfortify#referencecitation)
+* There are no publication for the package itself but you should still [cite it](https://github.com/sinhrks/ggfortify#referencecitation)
 * [Userguide](https://cran.r-project.org/web/packages/ggfortify/ggfortify.pdf)

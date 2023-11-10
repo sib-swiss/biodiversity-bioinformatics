@@ -60,7 +60,7 @@ These links are provided for information only, they are not needed now for the p
 **R**
 
 * [Website](https://www.R-project.org/)
-* There are no publication for R itself but you can [cite it](https://cran.r-project.org/doc/FAQ/R-FAQ.html#Citing-R)
+* There are no publication for R itself but you should still [cite it](https://cran.r-project.org/doc/FAQ/R-FAQ.html#Citing-R)
 * [Userguide](https://cran.r-project.org/manuals.html)
 
 **Chronos function of the ape package**

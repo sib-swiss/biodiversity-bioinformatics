@@ -29,13 +29,13 @@
 |  09:00 - 10:15  	| Introductory Lectures - Orthology & BUSCO                          	|
 |  10:15 - 10:30  	| Introduction to the Hands-On & Setting up Workspaces               	|
 | _10:30 - 11:00_ 	| _Coffee Break_                                                     	|
-|  11:00 - 12:00  	| Practical Exercise I - BUSCO                                       	|
+|  11:00 - 12:00  	| Practical Exercise 1 - BUSCO                                       	|
 | _12:00 - 13:00_ 	| _Lunch Break_                                                      	|
-|  13:00 - 13:45  	| Practical Exercise II - OrthoDB & Species Trees                    	|
-|  13:45 - 14:30  	| Practical Exercise III - Gene-Tree-Species-Tree Reconciliation     	|
+|  13:00 - 13:45  	| Practical Exercise 2 - OrthoDB & Species Trees                     	|
+|  13:45 - 14:30  	| Practical Exercise 3 - Gene-Tree-Species-Tree Reconciliation       	|
 | _14:30 - 15:00_ 	| _Coffee Break_                                                     	|
 |  15:00 - 15:45  	| Case Studies Lectures                                              	|
-|  15:45 - 16:30  	| Practical Exercise IV - Gene Family Ancestral State Reconstruction 	|
+|  15:45 - 16:30  	| Practical Exercise 4 - Gene Family Ancestral State Reconstruction  	|
 |  16:30 - 17:00  	| Wrap-up & Open Q&A                                                 	|
 
 ## Day 3 - Duplication of genes and genomes, expression
