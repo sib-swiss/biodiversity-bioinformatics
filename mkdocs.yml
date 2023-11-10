@@ -14,6 +14,7 @@ nav:
     - Day 3 - Duplication of genes and genomes, expression:
       - General information and course material: course_material/day3/1_general.md
       - Software and R packages: course_material/day3/2_software.md
+      - Finding information on gene function at small scale: course_material/day3/3_gene_function.md
 
 theme:
   name: material
