@@ -37,7 +37,7 @@ Now go to the **mouse** gene `NCDN` Uniprot page (`NCDN_MOUSE`).
 ??? done "Answer"
 
 
-Try it again with the **bovin** gene (`NCDN_BOVIN`), the **Drosophila** gene page (`NCDN_DROME`) and the **Xenopus** gene page (`NCDN_XENLA`).
+Try it again with the **bovin** gene (`NCDN_BOVIN`), the **drosophila** gene page (`NCDN_DROME`) and the **xenopus** gene page (`NCDN_XENLA`).
 
 **Questions:**
 
