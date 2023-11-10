@@ -13,6 +13,7 @@ nav:
       - Gene Family Ancestral State Reconstruction: course_material/day2/6_reconstruction.md
     - Day 3 - Duplication of genes and genomes, expression:
       - General information and course material: course_material/day3/1_general.md
+      - Software and R packages: course_material/day3/2_software.md
 
 theme:
   name: material
