@@ -45,9 +45,9 @@
 | 09:00 - 10:00 	| Lecture 1 - Function in model vs non-model organisms                               	|
 | 10:00 - 10:30 	| _Coffee Break_                                                                     	|
 | 10:30 - 11:30 	| Practical Exercise 1 - Finding information about gene function at small scale      	|
-| 11:30 - 12:30 	| Lecture 2 - Function at large scale                                                	|
+| 11:30 - 12:30 	| Lecture 2 - Finding function information at large scale                            	|
 | 12:30 - 13:30 	| _Lunch Break_                                                                      	|
 | 13:30 - 14:45 	| Practical Exercise 2 - Finding information about gene function of a group of genes 	|
 | 14:45 - 15:15 	| _Coffee Break_                                                                     	|
 | 15:15 - 16:00 	| Lecture 3 - Gene and genome duplication                                            	|
-| 16:00 - 17:00 	| Practical Exercise 3 - Function of duplicate genes                                 	|
+| 16:00 - 17:00 	| Practical Exercise 3 - Function of duplicated genes                                 	|
