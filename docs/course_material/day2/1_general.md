@@ -6,15 +6,15 @@ Understand the principles of graph-based orthology delineation using OrthoDB as 
 
 ### Presentation
 
-[:fontawesome-solid-file-pdf: Download the presentation](../../assets/pdf/day2_course_Robert_WATERHOUSE.pdf){: .md-button }
+[:fontawesome-solid-file-pdf: Download the presentation](../../assets/pdf/day2/course_Robert_WATERHOUSE.pdf){: .md-button }
 
 ### Case study: Moulting genes across arthropod diversity
 
-[:fontawesome-solid-file-pdf: Download the presentation](../../assets/pdf/day2_case_study1_Giulia_CAMPLI.pdf){: .md-button }
+[:fontawesome-solid-file-pdf: Download the presentation](../../assets/pdf/day2/case_study1_Giulia_CAMPLI.pdf){: .md-button }
 
 ### Case study: Diving into the _Drosophila_ immune response with orthology and expression data
 
-[:fontawesome-solid-file-pdf: Download the presentation](../../assets/pdf/day2_case_study2_Antonin_THIEBAUT.pdf){: .md-button }
+[:fontawesome-solid-file-pdf: Download the presentation](../../assets/pdf/day2/case_study2_Antonin_THIEBAUT.pdf){: .md-button }
 
 ## Course gitlab repository
 
