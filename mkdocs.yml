@@ -5,6 +5,7 @@ nav:
     - Course schedule: course_schedule.md
     - Day 1 - Introduction to molecular evolution & phylogenetics:
       - General information and course material: course_material/day1/1_general.md
+      - Links to the OMA Academy modules: course_material/day1/2_exercices.md
     - Day 2 - Orthology-focused arthropod comparative genomics:
       - General information and course material: course_material/day2/1_general.md
       - Software and resources: course_material/day2/2_software.md
