@@ -6,7 +6,7 @@ Understand the importance of gene and genome duplication in comparative genomics
 
 ### Lecture 1: Function in model vs non-model organisms
 
-[:fontawesome-solid-file-pdf: Download the presentation](../../assets/pdf/){: .md-button }  <!-- AT. Update path/move presentation into the parts with exercises? -->
+[:fontawesome-solid-file-pdf: Download the presentation](../../assets/pdf/day3/course_Marc_ROBINSON-RECHAVI_lecture1.pdf){: .md-button }  <!-- AT. Update path/move presentation into the parts with exercises? -->
 
 **Learning outcomes**
 
@@ -17,7 +17,7 @@ Understand the importance of gene and genome duplication in comparative genomics
 
 ### Lecture 2: Finding information about gene function at small scale
 
-[:fontawesome-solid-file-pdf: Download the presentation](../../assets/pdf/){: .md-button }  <!-- AT. Update path/move presentation into the parts with exercises? -->
+[:fontawesome-solid-file-pdf: Download the presentation](../../assets/pdf/day3/course_Marc_ROBINSON-RECHAVI_lecture2.pdf){: .md-button }  <!-- AT. Update path/move presentation into the parts with exercises? -->
 
 **Learning outcomes**
 
@@ -31,7 +31,7 @@ Understand the importance of gene and genome duplication in comparative genomics
 
 ### Lecture 3: Gene and genome duplication
 
-[:fontawesome-solid-file-pdf: Download the presentation](../../assets/pdf/){: .md-button }  <!-- AT. Update path/move presentation into the parts with exercises? -->
+[:fontawesome-solid-file-pdf: Download the presentation](../../assets/pdf/day3/course_Marc_ROBINSON-RECHAVI_lecture3.pdf){: .md-button }  <!-- AT. Update path/move presentation into the parts with exercises? -->
 
 **Learning outcomes**
 
