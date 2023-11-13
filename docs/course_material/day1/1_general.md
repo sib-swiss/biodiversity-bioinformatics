@@ -31,13 +31,15 @@ The gitlab repository to run all the practicals is available at [https://github.
 !!! note
 	Remember to open a Gitpod workspace before starting the practicals. Click [here](../../precourse.md#software) for more information on Gitpod workspace.
 
-## Intermediate result files
+## Working directories
 
 You can find the working directories of Modules 2, 3, and 4 in the following list:
 
 * [Module 2 working directory](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2023/tree/main/Module2_OMAmer/working_dir)
 * [Module 3 working directory](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2023/tree/main/Module3_FastOMA/working_dir/in_folder)
 * [Module 4 working directory](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2023/tree/main/Module4_SpeciesTrees/working_dir)
+
+## Exercises ouputs
 
 You can find the expected outputs of Modules 2, 3, and 4 in the following list:
 
