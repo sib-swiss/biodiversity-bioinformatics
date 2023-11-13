@@ -4,7 +4,7 @@
 |---------------	|-----------------------------------------------------------------------	|
 | 9:00 - 9:30   	| Welcome, Introductions                                                	|
 | 9:30 - 10:00  	| Lecture: Overview, objectives, motivation, concept of orthologs, HOGs 	|
-| 10:00 - 10:45 	| Module 1: genes, groups, and genomes in the OMA Browser               	|
+| 10:00 - 10:45 	| Module 1: Genes, groups, and genomes in the OMA Browser               	|
 | 10:45 - 11:15 	| _Coffee break_                                                        	|
 | 11:15 - 11:25 	| Go over results                                                       	|
 | 11:25 - 11:30 	| Lecture: introduce OMAmer                                             	|
