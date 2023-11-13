@@ -68,8 +68,8 @@ Do a GO enrichment analysis with the list of human genes but this time select th
 
 **Questions:**
 
-* What has changed?
-* Are these GO terms more meaningful for understanding the gene function?
+* **What has changed?**
+* **Are these GO terms more meaningful for understanding the gene function?**
 
 ??? done "Answer"
 
@@ -103,8 +103,8 @@ You can filter the result table based on any column by clicking on the column he
 
 **Questions**
 
-* In which anatomical entities do we have more expression than expected compared to the background genes?
-* Why do you think there is a difference if we compare the results sorting by `Fold enrichment` or by `Fdr`?
+* **In which anatomical entities do we have more expression than expected compared to the background genes?**
+* **Why do you think there is a difference if we compare the results sorting by `Fold enrichment` or by `Fdr`?**
 
 ??? done "Answer"
 
@@ -120,8 +120,8 @@ Try to do the same steps for other species such as Macaque or Opossum.
 
 **Questions:**
 
-* Do you get similar results?
-* Do you get more similar results between species than when comparing with autism spectrum results?
+* **Do you get similar results?**
+* **Do you get more similar results between species than when comparing with autism spectrum results?**
 
 ??? done "Answer"
 

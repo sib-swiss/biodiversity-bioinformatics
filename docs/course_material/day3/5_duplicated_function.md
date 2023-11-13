@@ -21,9 +21,9 @@ wc -l Drerio3Rohnologs_*
 
 **Questions:**
 
-* Why do you think they have a different number of genes?
-* Why does the zebrafish file have roughly twice the number of genes in the mouse file?
-* Why doesn't it have exactly twice as many genes?
+* **Why do you think they have a different number of genes?**
+* **Why does the zebrafish file have roughly twice the number of genes in the mouse file?**
+* **Why doesn't it have exactly twice as many genes?**
 
 ??? done "Answer"
 
@@ -32,9 +32,9 @@ Do a GO enrichment analysis with [PANTHER](https://www.pantherdb.org/) of the ze
 
 **Questions:**
 
-* What kind of GO terms do we see enriched in this list?
-* What does it tell us about the function of these genes?
-* Is it different from what we found with the one-to-one orthologs list on exercise 2?
+* **What kind of GO terms do we see enriched in this list?**
+* **What does it tell us about the function of these genes?**
+* **Is it different from what we found with the one-to-one orthologs list on exercise 2?**
 
 ??? done "Answer"
 
@@ -50,10 +50,10 @@ To further explore the function of these genes, do a [TopAnat](https://www.bgee.
 
 **Questions:**
 
-* What kind of anatomical entities do we see enriched in the zebrafish TopAnat?
-* Do they make sense given what we saw in the GO enrichment?
-* What can we say about the function of this set of genes?
-* Do we see the same in the mouse list? Why?
+* **What kind of anatomical entities do we see enriched in the zebrafish TopAnat?**
+* **Do they make sense given what we saw in the GO enrichment?**
+* **What can we say about the function of this set of genes?**
+* **Do we see the same in the mouse list? Why?**
 
 ??? done "Answer"
 
