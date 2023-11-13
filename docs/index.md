@@ -7,7 +7,7 @@
 * Christophe Dessimoz [:custom-orcid:](https://orcid.org/0000-0002-2170-853X)
 * Natasha Glover [:custom-orcid:](https://orcid.org/0000-0003-1811-4340)
 * Sina Majidian [:custom-orcid:](https://orcid.org/0000-0001-5345-6982)
-* Yannis Nevers
+* Yannis Nevers [:custom-orcid:](https://orcid.org/0000-0002-8604-2943)
 
 ### Day 2
 
