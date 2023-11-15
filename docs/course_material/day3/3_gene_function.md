@@ -107,7 +107,7 @@ Doing this, you will be directed to the gene search result page where you can se
 **Question: Why are there multiple Ensembl identifiers for one gene name (`NCDN`)?**
 
 ??? done "Answer"
-
+    We can see that the gene names do not change (always `NCDN`), however there are multiple Ensembl identifiers because each one corresponds to the `NCDN` of a different species. Indeed, each Ensembl ID has prefixes identifying the species and feature type.
 
 In this page, you will notably find a column for `Gene identifier` that represents the unique Ensembl identifiers for each species or the species scientific and common name in the column `Organism`. To continue, please select a species (for example **mouse**) and click on their Ensembl ID ([ENSMUSG00000028833](https://www.bgee.org/gene/ENSMUSG00000028833/)). This will lead you to the mouse specific gene page for `NCDN`; don't worry you will still be able to see other orthologs of `NCDN`.
 
@@ -126,7 +126,7 @@ In this expression tab, you will find all anatomical entities where Bgee has evi
 **Question: Looking at the top entries in the expression table, in which organ(s) do you think this gene is generally expressed?**
 
 ??? done "Answer"
-
+    We can see that the top three hits are _CA3 field of hippocampus_, _CA3 field of hippocampus_, _perirhinal cortex_. If we look at the next 10 hits, we also see that they are all tissues belonging to the brain. We can therefore suggest that this gene is expressed throughout the brain at really high levels (in the top 1% of most highly expressed genes in this region).
 
 We can also investigate if this gene is expressed at different stages of development. To do so, you can unselect `Anat. entity and cell types` and tick the `Dev. stage` box on top of the expression tab and update the results.
 
@@ -146,7 +146,8 @@ Here, we see that this gene seems to be expressed in late adults as well as the 
 * **Play around by combining the filters for sex, strain, developmental stage or anatomical entities, which insights can you gather?**
 
 ??? done "Answer"
-
+    * We can see, for example, that `NCDN` has relatively low expression in renal tissue even though it is still expressed (expression score lower than 50)
+    * We can, for example, see that mouse strains C57BL/6 X CD-1 have a way lower expression overall of the `NCDN` gene than C57BL/6-Tyr c-Brd strains. We can also see that this gene is expressed throughout the life cycle of mice from embryonic stages to adulthood
 
 By clicking on the `Orthologs` section in the menu on the left or scrolling down to it, you can find the different orthologs for NCDN which are found in Bgee. This information is retrieved from the OMA SPARQL endpoint that you used on the first day. Orthologs for NCDN are found at 11 different taxon levels. You can see the Ensembl identifiers of orthologous genes at specific taxon levels by clicking the `See details` arrow.
 
@@ -157,14 +158,14 @@ By clicking on the `Orthologs` section in the menu on the left or scrolling down
 **Question: Which is the higher taxon in which you can find human orthologs of mouse `NCDN`?**
 
 ??? done "Answer"
-
+    The _Euarchontoglires_ taxon.
 
 Unfold the orthologs (`See details`) to find the human `NCDN`, and open its page in a new tab.
 
 **Question: Does the function of `NCDN` seem to have been conserved between mouse and human? What about more distant species?**
 
 ??? done "Answer"
-
+    Looking at the `NCDN` gene in humans by finding it through the orthologs section, we can see that the `NCDN` gene is also highly expressed in the same tissues and at really similar levels of expression. We could therefore hypothesize that its function remained similar.
 
 Now we are going to compare the expression of the different orthologs of `NCDN` for Xenopus, Human, mouse, rat, guinea pig and macaque.
 
@@ -195,14 +196,14 @@ You will obtain the following results:
   <img src="../../../assets/images/day3/session1/expression_comparison_results.jpg" align="center">
 </figure>
 
-**Question: Looking at the max expression scores, do the results seem consistent with the anatomical localization of `NCDN` expression when looking at in individual species?**
+**Question: Looking at the max expression scores, do the results seem consistent with the anatomical localization of `NCDN` expression when looking at individual species?**
 
 ??? done "Answer"
-
+    Yes, the results are highly consistent, again we can see that `NCDN` expression is extremely highly expressed in the same tissues (mainly brain) throughout the given species.
 
 The conservation score represents the ratio between genes being called present in the tissue and the total number of genes. In our case since we only used orthologs, this value gives us the ratio between species which have `NCDN` expressed in that tissue divided by the total number of species for which we have data in that condition (maximum 6).
 
 **Question: With the help of the conservation score, can you see for which species and tissue there is a qualitative difference in the expression of `NCDN`?**
 
 ??? done "Answer"
-
+    Yes, we can see that _Xenopus tropicalis_ has lost expression of this gene in spleen and small intestine wherehas its expression remains relatively high in the other species.

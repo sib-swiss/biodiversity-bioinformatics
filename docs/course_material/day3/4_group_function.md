@@ -31,7 +31,7 @@ Another page will appear asking which reference set of genes to use as the unive
   <img src="../../../assets/images/day3/session2/panther_form1.jpg" align="center"/>
 </figure>
 
-Then, another page will appear with a summary of what you just selected and asking for details on the statistical tests. Make sure the Fischer's exact test and the False Discovery Rate options are selected and launch the analysis.
+Then, another page will appear with a summary of what you just selected and asking for details on the statistical tests. Make sure the Fisher's exact test and the False Discovery Rate options are selected and launch the analysis.
 
 <figure>
   <img src="../../../assets/images/day3/session2/panther_form2.jpg" align="center"/>
@@ -107,24 +107,22 @@ You can filter the result table based on any column by clicking on the column he
 * **Why do you think there is a difference if we compare the results sorting by `Fold enrichment` or by `Fdr`?**
 
 ??? done "Answer"
-
+    * We can see a strong enrichment of our list of genes compared to the whole human genes in gametes, oocytes, spermatocytes
+    * There can be big differences between the fold enrichment and the Fdr corrected p-value depending on how much data we had available to make the statistical significance tests and therefore the power we had to see any difference.
 
 You can open in another tab the results of the first (1) example case proposed by TopAnat (click on the number `1` next to `Examples` on the top of the page). `y`ou will see the kind of results you would get if you tested a gene list linked to the autism spectrum instead. You can always go back to the results from the last job by clicking on the `Recent jobs` button and then the name you gave to the job ID.
 
 **Question: Do you think genes related to autism are more tissue specific than our list of one-to-one orthologs?**
 
 ??? done "Answer"
-
+    If we put genes related to autism on TopAnat (example 1 in the website), we can see that the fold enrichments are really high and the Fdr p-values are all extremely low for brain related tissues. Therefore, they seem to indeed be a bit more tissue specific.
 
 Try to do the same steps for other species such as Macaque or Opossum.
 
-**Questions:**
-
-* **Do you get similar results?**
-* **Do you get more similar results between species than when comparing with autism spectrum results?**
+**Question: Do you get similar results? Do you get more similar results between species than when comparing with autism spectrum results?**
 
 ??? done "Answer"
-
+    Yes, we do get more similar results than when comparing with autism spectrum genes since the list is composed of genes for which we have orthologs in the different species and orthologs tend to have more similar tissue expression among each other than compared to random autism genes.
 
 ## Clustering of homologous organ expression in several species
 
@@ -153,4 +151,4 @@ And here is the second one that is colored based on anatomical entities:
 **Question: According to the PCA figures, is it the organs or the species that cluster more strongly together?**
 
 ??? done "Answer"
-
+    We can see that the clustering is much better when colored by organs than species, which is a result that is highly expected and seen in numerous studies.
