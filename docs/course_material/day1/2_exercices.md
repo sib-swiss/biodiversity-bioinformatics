@@ -16,7 +16,7 @@ The exercises were implemented as modules in the [OMA Academy](https://oma-stage
 
 Here are the links to directly access the different modules:
 
-* [Module 1](https://oma-stage.vital-it.ch/oma/academy/module/OMA_browser_2023)
-* [Module 2](https://oma-stage.vital-it.ch/oma/academy/module/OMAmer_2023)
-* [Module 3](https://oma-stage.vital-it.ch/oma/academy/module/fastOMA_2023)
-* [Module 4](https://oma-stage.vital-it.ch/oma/academy/module/species_tree_2023)
+* [Module 1](https://omabrowser.org/oma/academy/module/OMA_browser_2023)
+* [Module 2](https://omabrowser.org/oma/academy/module/OMAmer_2023)
+* [Module 3](https://omabrowser.org/oma/academy/module/fastOMA_2023)
+* [Module 4](https://omabrowser.org/oma/academy/module/species_tree_2023)
