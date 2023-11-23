@@ -25,7 +25,8 @@ Go to [Uniprot](https://www.uniprot.org/) and find the **human** gene `NCDN` pag
 * **How was this information annotated?**
 
 ??? done "Answer"
-
+    * It is involved in signal transduction in the nervous system
+    * The information was manually curated and obtained from two different papers (the information of both can be found next to the information that was retrieved from them)
 
 Now go to the **mouse** gene `NCDN` Uniprot page (`NCDN_MOUSE`).
 
@@ -35,9 +36,14 @@ Now go to the **mouse** gene `NCDN` Uniprot page (`NCDN_MOUSE`).
 * **How was this information annotated?**
 
 ??? done "Answer"
-
+    Similar information, three different papers linked to it.
 
 Try it again with the **bovin** gene (`NCDN_BOVIN`), the **drosophila** gene page (`NCDN_DROME`) and the **xenopus** gene page (`NCDN_XENLA`).
+
+??? done "Answer"
+    * Bovin information was obtained by sequence similarity to other species protein
+    * There is not a lot of information in the _Drosophila_ page and it was obtained from a mutant (no link to any paper in this case)
+    * _Xenopus_ information was also obtained by sequence similarity to other species
 
 **Questions:**
 
@@ -45,7 +51,8 @@ Try it again with the **bovin** gene (`NCDN_BOVIN`), the **drosophila** gene pag
 * **In which species is most of the research on `NCDN` done?**
 
 ??? done "Answer"
-
+    * For the model species in which studies are preformed, normally, there is high quality, manually curated information with easy link to the publication sources. For non-model species for which no specific research was performed, all the information that we can find is deduced by sequence similarity to model species
+    * Mouse but mostly rat
 
 Two other ways to shed light into a gene's function are checking its subcellular localization and its sequence features (domains, variants…). We can find information on both of these aspects in Uniprot. First, focus on the subcellular location. There is one section dedicated to this in all Uniprot gene pages. Explore all the ones we opened before.
 
@@ -55,7 +62,8 @@ Two other ways to shed light into a gene's function are checking its subcellular
 * **From where was each information retrieved?**
 
 ??? done "Answer"
-
+    * It can be found in the dendrites and the postsynaptic space. It makes totally sense with its function. Now we know that it has a role in the postsynaptic part of signal transduction
+    * For all species, the information is mainly obtained by similarity to the rat uniprot page because most of the research in this regard was done in rat
 
 Now try the same with the sequence features. There is a new `Feature viewer` in Uniprot gene pages. Explore it for all the species above.
 
@@ -65,7 +73,8 @@ Now try the same with the sequence features. There is a new `Feature viewer` in 
 * **Does it mean that retrieving information from a protein sequence is meaningless?**
 
 ??? done "Answer"
-
+    * It is not very informative but still we can learn about variants of its sequence, post translational modifications, protein structure, etc...
+    * No, in many cases it can be informative and in any case, knowing about these features can complement other information and help understand the protein function
 
 ## Learn about `NCDN`'s Gene Ontology annotation
 
@@ -75,6 +84,9 @@ First, still in the Uniprot gene pages. Go to the GO annotation section on each 
 
 **Question: What can we learn on GO annotations in non-model species?**
 
+??? done "Answer"
+    GO Annotations in non-model species are again, retrieved by similarity from model species.
+
 Go to the [AmiGO 2 website](https://amigo.geneontology.org/amigo/landing), in the top menu, select `Search` and then `Genes and gene products`. Search for our `NCDN` gene.
 
 **Questions:**
@@ -83,14 +95,15 @@ Go to the [AmiGO 2 website](https://amigo.geneontology.org/amigo/landing), in th
 * **How can we get GO annotations for other species?**
 
 ??? done "Answer"
-
+    * Mainly mammals including the model species and the non-mammal model species. This means that we have information for the species that are more frequently studied
+    * As we saw before, with the lack of specific studies, GO annotation for other species can be retrieved by sequence similarity between homologous proteins. This is helpful in many cases because it provides information without investing time and money to do the studies for each species. At the same time, this information needs to be handled with caution because it is only deduced by similarity, it has not been demonstrated for each given species
 
 Now you can go to each species AmiGO 2 `NCDN` pages. Explore them a bit.
 
 **Question: From where do they retrieve the evidence for the GO annotations?**
 
 ??? done "Answer"
-
+    Many of the annotations are already phylogenetic-based propagations. Basically, only the model species have originally attributed GO annotations
 
 ## Look at expression of `NCDN` for several species in Bgee
 
