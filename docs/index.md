@@ -27,6 +27,10 @@
 * Antonin Thiébaut [:custom-orcid:](https://orcid.org/0000-0002-7587-5587)
 * Patricia Palagi [:custom-orcid:](https://orcid.org/0000-0001-9062-6303)
 
+## License
+
+License is [CC BY-SA 4.0](https://raw.githubusercontent.com/sib-swiss/biodiversity-bioinformatics/main/LICENSE.md).
+
 ## Material
 
 * This website
