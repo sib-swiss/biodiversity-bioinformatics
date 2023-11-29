@@ -45,7 +45,8 @@ Great, we have done the GO enrichment analysis for the human genes in our list. 
 * Is it what you expected?
 
 ??? done "Answer"
-
+    * We see a list of enriched GO terms with a lot of representation of essential biological processes like development and essential molecular functions. There are some GO terms related to transport or response to stimulus too but not a lot
+    * Yes, it is what we expected because we are using a list of one-to-one orthologs between mammals and chicken. They are expected to be genes related to essential biological functions
 
 Repeat the same analysis for the opossum and the chicken gene lists in new browser tabs. Keep the results of the human gene list open and compare them.
 
@@ -55,6 +56,8 @@ Repeat the same analysis for the opossum and the chicken gene lists in new brows
 * How do annotations differ between species?
 
 ??? done "Answer"
+    * For the chicken we see much more GO terms related to transport, regulation and immune system than for the human. We also see some biological process specific of birds. The opossum enriched GO term list is much more similar to that of human. We see a lot of developmental and core processes. No opossum-specific biological process can be seen and, in general, the therms are less specific
+    * The human case is clearly the most detailed. Opossum annotation seems to be mainly retrieved from that of other mammal species, this is why we don’t see a lot of specificity in GO terms and none specific of opossum. Chicken annotation has some bird-specific terms but showed less essential processes for the same group of orthologous genes. This might suggest that the chicken annotation is not based on that of other model species, but it is a bit incomplete and biased towards the most studied processes in this species
 
 
 ### Extra question if time permits
@@ -72,7 +75,8 @@ Do a GO enrichment analysis with the list of human genes but this time select th
 * **Are these GO terms more meaningful for understanding the gene function?**
 
 ??? done "Answer"
-
+    * Few molecular processes are enriched in this list of genes compared to the biological processes GO terms. Nevertheless, the ones that are enriched are related to basic processes like expected. This point towards the one-to-one orthologs being overall enriched in biological processes as a hole more than enriched in more specific molecular functions
+    * The molecular function GO terms are useful when trying to understand the molecular pathways and metabolic processes enriched in a group of genes. In our case, the biological processes go terms are more meaningful because our list of genes is quite general and related to evolutionary conservation more than to specific molecular characteristics
 
 ### Tools to visually represent GO enrichment results
 
