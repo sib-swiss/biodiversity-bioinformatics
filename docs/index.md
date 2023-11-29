@@ -22,10 +22,9 @@
 * Marina Brasó-Vives [:custom-orcid:](https://orcid.org/0000-0001-5007-5789)
 * Julien Wollbrett [:custom-orcid:](https://orcid.org/0000-0002-3099-3117)
 
-## Course repository and website authors
+## Course repository and website author
 
 * Antonin Thiébaut [:custom-orcid:](https://orcid.org/0000-0002-7587-5587)
-* Patricia Palagi [:custom-orcid:](https://orcid.org/0000-0001-9062-6303)
 
 ## License
 
