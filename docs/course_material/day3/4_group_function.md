@@ -60,7 +60,7 @@ Repeat the same analysis for the opossum and the chicken gene lists in new brows
     * The human case is clearly the most detailed. Opossum annotation seems to be mainly retrieved from that of other mammal species, this is why we don’t see a lot of specificity in GO terms and none specific of opossum. Chicken annotation has some bird-specific terms but showed less essential processes for the same group of orthologous genes. This might suggest that the chicken annotation is not based on that of other model species, but it is a bit incomplete and biased towards the most studied processes in this species
 
 
-### Extra question if time permits
+### Extra questions if time permits
 
 Do a GO enrichment analysis with the list of human genes but this time select the `GO molecular function complete` list of GO terms. Check the results.
 
