@@ -28,7 +28,7 @@
 
 ## License
 
-License is [CC BY-SA 4.0](https://raw.githubusercontent.com/sib-swiss/biodiversity-bioinformatics/main/LICENSE.md).
+License is [CC-BY 4.0](https://raw.githubusercontent.com/sib-swiss/biodiversity-bioinformatics/main/LICENSE.md).
 
 ## Material
 
