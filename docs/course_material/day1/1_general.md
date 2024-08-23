@@ -26,7 +26,7 @@ Interpret phylogenetic trees and alignments; general understanding of how trees 
 
 ## Course gitlab repository
 
-The gitlab repository to run all the practicals is available at [https://github.com/DessimozLab/SIBBiodiversityBioinformatics2023](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2023).
+The gitlab repository to run all the practicals is available at [https://github.com/DessimozLab/SIBBiodiversityBioinformatics2024](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2024).
 
 !!! note
 	Remember to open a Gitpod workspace before starting the practicals. Click [here](../../precourse.md#software) for more information on Gitpod workspace.
@@ -35,14 +35,14 @@ The gitlab repository to run all the practicals is available at [https://github.
 
 You can find the working directories of Modules 2, 3, and 4 in the following list:
 
-* [Module 2 working directory](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2023/tree/main/Module2_OMAmer/working_dir)
-* [Module 3 working directory](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2023/tree/main/Module3_FastOMA/working_dir/in_folder)
-* [Module 4 working directory](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2023/tree/main/Module4_SpeciesTrees/working_dir)
+* [Module 2 working directory](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2024/tree/main/Module2_OMAmer/working_dir)
+* [Module 3 working directory](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2024/tree/main/Module3_FastOMA/working_dir/in_folder)
+* [Module 4 working directory](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2024/tree/main/Module4_SpeciesTrees/working_dir)
 
 ## Exercises ouputs
 
 You can find the expected outputs of Modules 2, 3, and 4 in the following list:
 
-* [Module 2 expected outputs](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2023/tree/main/Module2_OMAmer/expected_output)
-* [Module 3 expected outputs](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2023/tree/main/Module3_FastOMA/expected_output)
-* [Module 4 expected outputs](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2023/tree/main/Module4_SpeciesTrees/expected_output)
+* [Module 2 expected outputs](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2024/tree/main/Module2_OMAmer/expected_output)
+* [Module 3 expected outputs](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2024/tree/main/Module3_FastOMA/expected_output)
+* [Module 4 expected outputs](https://github.com/DessimozLab/SIBBiodiversityBioinformatics2024/tree/main/Module4_SpeciesTrees/expected_output)
