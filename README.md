@@ -1,4 +1,4 @@
-Website is hosted at: [https://sib-swiss.github.io/biodiversity-bioinformatics/](https://sib-swiss.github.io/biodiversity-bioinformatics/)
+Website is hosted at: [https://sib-swiss.github.io/biodiversity-bioinformatics/](https://sib-swiss.github.io/biodiversity-bioinformatics/latest/)
 
 Please refer to [issues](https://github.com/sib-swiss/biodiversity-bioinformatics/issues) for improvements/bugs for course material or the website.
 

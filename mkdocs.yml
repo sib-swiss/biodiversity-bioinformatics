@@ -29,13 +29,15 @@ theme:
     repo: fontawesome/brands/github
   features:
     - announce.dismiss
+    - content.code.copy
 
 extra:
   version:
     provider: mike
 
 copyright:
-  <a href="#__consent">Change cookies settings</a>
+  Copyright &copy; 2021-2025 SIB Swiss institute of Bioinformatics -
+  <a href="#__consent">Change cookie settings</a>
 
 # Repository
 repo_name: sib-swiss/biodiversity-bioinformatics
