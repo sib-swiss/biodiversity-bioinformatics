@@ -1,0 +1,75 @@
+{
+  "upload_type": "lesson",
+  "license": "cc-by-4.0",
+  "title": "Biodiversity Bioinformatics",
+  "keywords": [
+    "biodiversity",
+    "molecular evolution",
+    "phylogenetics",
+    "comparative genomics",
+    "gene expression",
+    "duplication",
+    "gitpod",
+    "course",
+    "training"
+  ],
+  "creators": [
+    {
+      "name": "Christophe Dessimoz",
+      "affiliation": "SIB Swiss Institute of Bioinformatics",
+      "orcid": "0000-0002-2170-853X"
+    },
+    {
+      "name": "Natasha Glover",
+      "affiliation": "SIB Swiss Institute of Bioinformatics",
+      "orcid": "0000-0003-1811-4340"
+    },
+    {
+      "name": "Athina Gavriilidou",
+      "affiliation": "University of Lausanne, Department of Computational Biology",
+      "orcid": "0000-0002-6805-3868"
+    },
+    {
+      "name": "Stefano Pascarelli",
+      "affiliation": "University of Lausanne, Department of Computational Biology",
+      "orcid": "0000-0002-5529-3774"
+    },
+    {
+      "name": "Robert Waterhouse",
+      "affiliation": "SIB Swiss Institute of Bioinformatics",
+      "orcid": "0000-0003-4199-9052"
+    },
+    {
+      "name": "Giulia Campli",
+      "affiliation": "University of Lausanne, Department of Ecology and Evolution",
+      "orcid": "0009-0008-7732-9222"
+    },
+    {
+      "name": "Marc Robinson-Rechavi",
+      "affiliation": "University of Lausanne, Department of Ecology and Evolution",
+      "orcid": "0000-0002-3437-3329"
+    },
+    {
+      "name": "Alessandro Brandulas Cammarata",
+      "affiliation": "University of Lausanne, Department of Ecology and Evolution",
+      "orcid": "0009-0006-5956-9842"
+    },
+    {
+      "name": "Marina Brasó-Vives",
+      "affiliation": "University of Lausanne, Department of Ecology and Evolution",
+      "orcid": "0000-0001-5007-5789"
+    },
+    {
+      "name": "Julien Wollbrett",
+      "affiliation": "SIB Swiss Institute of Bioinformatics",
+      "orcid": "0000-0002-3099-3117"
+    },
+    {
+      "name": "Antonin Thiébaut",
+      "affiliation": "Biomedical Data Science Center, Lausanne University Hospital, Lausanne, Switzerland",
+      "orcid": "0000-0002-7587-5587"
+    }
+  ]
+}
+
+

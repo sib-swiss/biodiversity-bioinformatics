@@ -6,14 +6,13 @@
 
 * Christophe Dessimoz [:custom-orcid:](https://orcid.org/0000-0002-2170-853X)
 * Natasha Glover [:custom-orcid:](https://orcid.org/0000-0003-1811-4340)
-* Sina Majidian [:custom-orcid:](https://orcid.org/0000-0001-5345-6982)
-* Yannis Nevers [:custom-orcid:](https://orcid.org/0000-0002-8604-2943)
+* Athina Gavriilidou [:custom-orcid:](https://orcid.org/0000-0002-6805-3868)
+* Stefano Pascarelli [:custom-orcid:](https://orcid.org/0000-0002-5529-3774)
 
 ### Day 2
 
 * Robert Waterhouse [:custom-orcid:](https://orcid.org/0000-0003-4199-9052)
 * Giulia Campli [:custom-orcid:](https://orcid.org/0009-0008-7732-9222)
-* Antonin Thiébaut [:custom-orcid:](https://orcid.org/0000-0002-7587-5587)
 
 ### Day 3
 
@@ -25,6 +24,7 @@
 ## Course repository and website author
 
 * Antonin Thiébaut [:custom-orcid:](https://orcid.org/0000-0002-7587-5587)
+* Julien Wollbrett [:custom-orcid:](https://orcid.org/0000-0002-3099-3117)
 
 ## License
 
